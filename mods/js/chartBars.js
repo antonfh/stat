@@ -76,10 +76,10 @@ appChart
             $http({method: 'GET', url: 'mainContentOneLine.json'})
                 .success(function (data, status, headers, config) {
 
-                    this.DatasetLineChart1 = data['data'];
+                    this.DatasetLineChart1 = data['series'];
                     this.LabelsLineChart1 = data['labels'];
 
-                    $scope.data = data['data'];
+                    $scope.data = data['series'];
                     $scope.labels = data['labels'];
                 })
                 .error(function (data, status, headers, config) {
@@ -96,7 +96,7 @@ appChart
 
                         set1 = DatasetLineChart1;
                         set1.shift();
-                        set1.push(data['data'][0]);
+                        set1.push(data['series'][0]);
 
                         DatasetLineChart1 = set1;
 
@@ -113,10 +113,6 @@ appChart
                     });
             }, 60000, $http);
 
-
-
-
-
-
-        }])
+        }]
+    )
 ;

@@ -19,10 +19,10 @@ appChart
 
             $http({method: 'GET', url: 'mainContent.json'})
             .success(function (data, status, headers, config) {
-                this.Dataset1 = data['data'];
+                this.Dataset1 = data['series'];
                 this.Labels1 = data['labels'];
 
-                $scope.data = data['data'];
+                $scope.data = data['series'];
                 $scope.labels = data['labels'];
 
             })
@@ -42,8 +42,8 @@ appChart
 
                     set1.shift();
                     set2.shift();
-                    set1.push(data['data'][0][0]);
-                    set2.push(data['data'][1][0]);
+                    set1.push(data['series'][0][0]);
+                    set2.push(data['series'][1][0]);
 
                     Dataset1 = [set1,set2];
 
