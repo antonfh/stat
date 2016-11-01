@@ -58,7 +58,7 @@ appChart
                 .error(function (data, status, headers, config) {
                     console.log('Data error' + status)
                 });
-            }, 44500, $http);
+            }, 72000, $http);
         }]
     )
 ;

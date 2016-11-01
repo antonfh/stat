@@ -1,31 +1,15 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-$ddata[0] = '
-{
-    "series":[89],
-    "labels" : ["1"]
+date_default_timezone_set('Africa/Johannesburg');
+
+$ddata = '
+{"series":[
+[' . rand(-100, 100) . '],
+[' . rand(-100, 100) . ']
+  ]
+  ,"labels" : ["' . Date("H:i") . '"]
 }
 ';
 
-$ddata[1] = '
-{
-    "series":[-75],
-    "labels" : ["2"]
-}
-';
 
-$ddata[2] = '
-{
-    "series":[45],
-    "labels" : ["3"]
-}
-';
-
-$ddata[3] = '
-{
-    "series":[145],
-    "labels" : ["4"]
-}
-';
-
-echo $ddata[rand(0,3)];
+echo $ddata;
