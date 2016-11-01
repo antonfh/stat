@@ -34,7 +34,8 @@ appChart
 
 
             // Simulate async data update
-            $interval(function () {
+            chartHoriz = $interval;
+            chartHoriz(function () {
 
                 $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
                     .success(function (data, status, headers, config) {

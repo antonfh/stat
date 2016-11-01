@@ -14,14 +14,14 @@ appChart
     .controller("BarLineCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
             $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
-            this.Dataset;
-            this.Labels;
+            this.Datasetclb;
+            this.Labelsclb;
 
             $http({method: 'GET', url: 'mainContent.json'})
                 .success(function (data, status, headers, config) {
 
-                    this.Dataset = data['series'];
-                    this.Labels = data['labels'];
+                    this.Datasetclb = data['series'];
+                    this.Labelsclb = data['labels'];
 
                     $scope.data = data['series'];
                     $scope.labels = data['labels'];
@@ -45,28 +45,30 @@ appChart
                 }
             ];
 
+
             // Simulate async data update
-            $interval(function () {
+            test = $interval;
+            test(function () {
 
                 $http({method: 'GET', url: 'mainContentRand.php'})
                     .success(function (data, status, headers, config) {
 
-                        set1 = Dataset[0];
-                        set2 = Dataset[1];
+                        set1clb = Datasetclb[0];
+                        set2clb = Datasetclb[1];
 
-                        set1.shift();
-                        set2.shift();
-                        set1.push(data['series'][0][0]);
-                        set2.push(data['series'][1][0]);
+                        set1clb.shift();
+                        set2clb.shift();
+                        set1clb.push(data['series'][0][0]);
+                        set2clb.push(data['series'][1][0]);
 
-                        Dataset = [set1,set2];
+                        Dataset = [set1clb,set2clb];
 
-                        setLabels = Labels;
-                        setLabels.shift();
-                        setLabels.push(data['labels'][0]);
+                        setLabelsclb = Labelsclb;
+                        setLabelsclb.shift();
+                        setLabelsclb.push(data['labels'][0]);
 
-                        $scope.data = Dataset;
-                        $scope.labels = setLabels;
+                        $scope.data = Datasetclb;
+                        $scope.labels = setLabelsclb;
 
                     })
                     .error(function (data, status, headers, config) {

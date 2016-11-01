@@ -89,7 +89,9 @@ appChart
 
 
             // Simulate async data update
-            $interval(function () {
+            chartbars = $interval;
+
+            chartbars(function () {
 
                 $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
                     .success(function (data, status, headers, config) {

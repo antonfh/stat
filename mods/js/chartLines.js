@@ -19,41 +19,45 @@ appChart
 
 
             $http({method: 'GET', url: 'mainContentOneLine.json'})
-                .success(function (data, status, headers, config) {
+                .success(function (datalc1, status, headers, config) {
 
-                    this.DatasetLineChart1 = data['series'];
-                    this.LabelsLineChart1 = data['labels'];
+                    this.DatasetLineChart1 = datalc1['series'];
+                    this.LabelsLineChart1 = datalc1['labels'];
 
-                    $scope.data = data['series'];
-                    $scope.labels = data['labels'];
+                    $scope.data1 = datalc1['series'];
+                    $scope.labels1 = datalc1['labels'];
                 })
-                .error(function (data, status, headers, config) {
+                .error(function (datalc1, status, headers, config) {
                     console.log('Data error' + status)
                 });
 
 
-
             // Simulate async data update
-            $interval(function () {
+            chartlines = $interval;
+
+            chartlines(function () {
 
                 $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
-                    .success(function (data, status, headers, config) {
+                    .success(function (datacl, status, headers, config) {
+
+                        console.log('Bubble Chrt');
+                        console.log(datacl);
 
                         set1 = DatasetLineChart1;
                         set1.shift();
-                        set1.push(data['series'][0]);
+                        set1.push(datacl['series'][0]);
 
                         DatasetLineChart1 = set1;
 
                         setLabelsLineChart1 = LabelsLineChart1;
                         setLabelsLineChart1.shift();
-                        setLabelsLineChart1.push(data['labels']);
+                        setLabelsLineChart1.push(datacl['labels']);
 
-                        $scope.data = DatasetLineChart1;
-                        $scope.labels = setLabelsLineChart1;
+                        $scope.data1 = DatasetLineChart1;
+                        $scope.labels1 = setLabelsLineChart1;
 
                     })
-                    .error(function (data, status, headers, config) {
+                    .error(function (datacl, status, headers, config) {
                         console.log('Data error' + status)
                     });
             }, 72000, $http);

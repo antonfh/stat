@@ -34,3 +34,9 @@
     line-height: 1;
     z-index: 999;
 }
+
+.graph_container {
+    padding: 15px;
+    background-color: rgba(134, 153, 164, 0.05);
+    border: 1px #8699A4 solid;
+}
