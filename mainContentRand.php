@@ -1,6 +1,6 @@
 
 <?php
-header("Access-Control-Allow-Origin: http://pdmsssa.dev");
+header("Access-Control-Allow-Origin: *");
 
 $ddata[0] = '
 {"series":[
