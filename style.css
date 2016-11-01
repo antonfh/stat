@@ -1,0 +1,36 @@
+.ct-line.ct-threshold-above, .ct-point.ct-threshold-above, .ct-bar.ct-threshold-above {
+    stroke: #59922b;
+}
+
+.ct-line.ct-threshold-below, .ct-point.ct-threshold-below, .ct-bar.ct-threshold-below {
+
+    stroke: #f05b4f;
+}
+
+.ct-area.ct-threshold-above {
+    fill: #59922b;
+}
+
+.ct-area.ct-threshold-below {
+
+    fill: #f05b4f;
+}
+
+.ct-label {
+    fill: rgba(0,0,0,.4);
+    color: rgba(0,0,0,.4);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ct-label-point {
+    /*fill: rgb(75, 133, 49);*/
+    /*color: rgba(0,0,0,.4);*/
+    background-color: red;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 999;
+}

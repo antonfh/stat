@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="node_modules/lodash/lodash.min.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>-->
+   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="node_modules/gridstack/dist/gridstack.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+
+
+
+</head>
+<body ng-app="appChart">
+<br />
+<div class="container">
+    <div class="row">
+
+        <div class="grid-stack" >
+
+            <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+                <div class="grid-stack-item-content" ng-controller="LineCtrl">
+                    <div class="graph_container"  style="background: yellow; padding: 15px" >
+                    Bubble chart
+                    <br />
+                    <canvas class="chart chart-line" chart-data="data"
+                            chart-labels="labels" chart-series="series" chart-options="options"
+                            chart-dataset-override="datasetOverride" chart-click="onClick">
+                    </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+                <div class="grid-stack-item-content" ng-controller="BarLineCtrl">
+                    <div class="graph_container"  style="background: lightgray; padding: 15px" >
+                    Line & Bar chart combined
+                    <br />
+                    <canvas id="base1" class="chart-bar" chart-data="data" chart-labels="labels" chart-colors="colors"
+                            chart-dataset-override="datasetOverride">
+                    </canvas>
+                        </div>
+                </div>
+            </div>
+
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content" ng-controller="LineCtrl2">
+                    <div class="graph_container"  style="background: lightskyblue; padding: 15px" >
+                        Line chart
+                        <br />
+                        <canvas id="line" class="chart chart-line" chart-data="data"
+                                chart-labels="labels" chart-series="series" chart-options="options"
+                                chart-dataset-override="datasetOverride" chart-click="onClick">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="5" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content"  ng-controller="BarChart1">
+                    <div class="graph_container"  style="background: lightgoldenrodyellow; padding: 15px" >
+                        Bar chart
+                        <br />
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels" chart-series="series">
+                        </canvas>
+                        </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content" ng-controller="pieCtrl">
+                    <div class="graph_container"  style="background: lavenderblush; padding: 15px" >
+                        Pie chart
+                        <br />
+                        <canvas id="pie" class="chart chart-pie"
+                                chart-data="data" chart-labels="labels" chart-options="options">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="10" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content"  ng-controller="BarChartHoriz1">
+                    <div class="graph_container"  style="background: lightcyan; padding: 15px" >
+                        Bar chart horizontal
+                        <br />
+                        <canvas id="base" class="chart-horizontal-bar"
+                                chart-data="data" chart-labels="labels" >
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content" ng-controller="polarCtrl">
+                    <div class="graph_container"  style="background: lavenderblush; padding: 15px" >
+                        Polar chart
+                        <br />
+                        <canvas id="polar-area" class="chart chart-polar-area"
+                                chart-data="data" chart-labels="labels" chart-options="options">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="15" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content"  ng-controller="doughnutCtrl">
+                    <div class="graph_container"  style="background: lightcyan; padding: 15px" >
+                      Doughnut chart
+                        <br />
+                        <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
+                <div  class="grid-stack-item-content" ng-controller="radarCtrl">
+                    <div class="graph_container"  style="background: lavenderblush; padding: 15px" >
+                        Radar chart
+                        <br />
+                        <canvas id="radar" class="chart chart-radar"
+                                chart-data="data" chart-options="options" chart-labels="labels">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="20" data-gs-width="10" data-gs-height="3">
+                <div  class="grid-stack-item-content"  ng-controller="BarChart1 as Chartist">
+                    <div class="graph_container"  style="padding: 15px" >
+                        x chart
+                        <br />
+                            <chartist class="ct-chart" chartist-data="Chartist.chartistbarData" chartist-chart-type="{{Chartist.Type}}" chartist-chart-options="Chartist.chartOptions"  chartist-responsive-options="Chartist.barResponsiveOptions"></chartist>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div ng-controller="BarChart1 as Chartist">
+    <div style="padding: 15px" >
+        x chart
+        <br />
+        <chartist class="ct-chart" chartist-data="Chartist.chartistbarData" chartist-chart-type="{{Chartist.Type}}" chartist-chart-options="Chartist.chartOptions" ></chartist>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+</body>
+
+<script src="node_modules/angular/angular.min.js"></script>
+
+<script src="node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<script src="node_modules/gridstack/dist/gridstack.min.js"></script>
+<script src="bower_components/chartistAngularDirective.js/build/chartistAngularDirective.min.js"></script>
+<script src="node_modules/angular-chartist.js/dist/angular-chartist.min.js"></script>
+<script src="bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js"></script>
+<script src="bower_components/chartist-plugin-zoom/dist/chartist-plugin-zoom.min.js"></script>
+<script src="bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.js"></script>
+<!-- Example AngularChart Controllers -->
+<script src="mods/js/grCtrl.js"></script>
+<script src="mods/js/chartSpots.js"></script>
+<script src="mods/js/chartLineBars.js"></script>
+<script src="mods/js/chartLines.js"></script>
+<script src="mods/js/chartBars.js"></script>
+<script src="mods/js/chartPies.js"></script>
+<script src="mods/js/chartBarsHorizontal.js"></script>
+<script src="mods/js/chartPolarArea.js"></script>
+<script src="mods/js/chartDougnut.js"></script>
+<script src="mods/js/chartRadar.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var options = {
+            cellHeight: 90,
+            verticalMargin: 20,
+            horizontalMargin: 20
+        };
+        $('.grid-stack').gridstack(options);
+    });
+</script>
+
+
+</html>
