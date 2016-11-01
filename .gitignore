@@ -157,3 +157,4 @@ themes/classic/views/
 ### TortoiseGit template
 # Project-level settings
 /.tgitconfig
+.gitignore
