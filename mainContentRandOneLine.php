@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin: http://pdmsssa.dev");
 $ddata[0] = '
 {
     "series":[89],
