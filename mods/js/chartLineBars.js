@@ -46,7 +46,7 @@ appChart
             test = $interval;
             test(function () {
 
-                getDataObj = getData('mainContentRand.json', $http);
+                getDataObj = getData('mainContentRand.php', $http);
 
                 getDataObj.then(function(data) {
 
@@ -80,7 +80,7 @@ appChart
             this.Datasetclb2;
             this.Labelsclb2;
 
-            $http({method: 'GET', url: 'mainContenat.json'})
+            $http({method: 'GET', url: 'mainContenatjson.php'})
                 .success(function (data2, status, headers, config) {
 
                     this.Datasetclb2 = data2['series'];
