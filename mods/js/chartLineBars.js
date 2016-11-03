@@ -48,10 +48,10 @@ appChart
 
                 getDataObj = getData('mainContentRand.php', $http);
 
-                getDataObj.then(function(data) {
+                getDataObj.then(function(dataw, Datasetclb, Labelsclb) {
 
-                    Datasetclb = data.data.series;
-                    Labelsclb = data.data.labels;
+                    Datasetclb = dataw.data.series;
+                    Labelsclb = dataw.data.labels;
 
                     set1clb = Datasetclb[0];
                     set2clb = Datasetclb[1];
@@ -59,15 +59,16 @@ appChart
                     set1clb.shift();
                     set2clb.shift();
 
-                    console.log(data);
-                    set1clb.push(data.data.series[0][0]);
-                    set2clb.push(data.data.series[1][0]);
+                    console.log('Interval 62:');
+                    console.log(dataw);
+                    set1clb.push(dataw.data.series[0][0]);
+                    set2clb.push(dataw.data.series[1][0]);
 
                     Dataset = [set1clb,set2clb];
 
                     setLabelsclb = Labelsclb;
                     setLabelsclb.shift();
-                    setLabelsclb.push(data.data.labels[0]);
+                    setLabelsclb.push(dataw.data.labels[0]);
 
                     $scope.data = Datasetclb;
                     $scope.labels = setLabelsclb;
