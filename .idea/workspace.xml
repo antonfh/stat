@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainContenat.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainContentRanad.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mods/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mods/getData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainContentOneLinejson.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainContentjson.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRand.php" afterPath="$PROJECT_DIR$/mainContentRand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRandOneLine.php" afterPath="$PROJECT_DIR$/mainContentRandOneLine.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartBars.js" afterPath="$PROJECT_DIR$/mods/js/chartBars.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartBarsHorizontal.js" afterPath="$PROJECT_DIR$/mods/js/chartBarsHorizontal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLineBars.js" afterPath="$PROJECT_DIR$/mods/js/chartLineBars.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLines.js" afterPath="$PROJECT_DIR$/mods/js/chartLines.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartSpots.js" afterPath="$PROJECT_DIR$/mods/js/chartSpots.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/grCtrl.js" afterPath="$PROJECT_DIR$/mods/js/grCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,47 +56,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="options-override.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/options-override.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/test/fixtures/charts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-chartist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/angular-chartist.js/dist/angular-chartist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chartLineBars.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getData.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/getData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -136,8 +91,8 @@
       <file leaf-file-name="mainContentRanad.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainContentRanad.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -153,11 +108,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainContenat.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainContenat.json">
+      <file leaf-file-name="mainContentjson.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mainContentjson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+            <state relative-caret-position="68">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainContentOneLine.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainContentOneLine.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainContentOneLinejson.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainContentOneLinejson.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,8 +141,8 @@
       <file leaf-file-name="chartLines.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartLines.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+            <state relative-caret-position="510">
+              <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -183,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grCtrlSpec.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mods/js/grCtrlSpec.js">
+      <file leaf-file-name="chartRadar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mods/js/chartRadar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -196,8 +171,8 @@
       <file leaf-file-name="grCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            <state relative-caret-position="306">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -223,6 +198,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="chartSpots.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mods/js/chartSpots.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-149">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="chartPolarArea.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartPolarArea.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -236,8 +221,8 @@
       <file leaf-file-name="chartBars.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartBars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="-24">
+              <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -246,8 +231,8 @@
       <file leaf-file-name="chartBarsHorizontal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartBarsHorizontal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="19" selection-start-line="22" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="-177">
+              <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -286,19 +271,21 @@
         <option value="$PROJECT_DIR$/mainContent.json" />
         <option value="$PROJECT_DIR$/mainContentRand.php" />
         <option value="$PROJECT_DIR$/mainContentRandOneLine.php" />
-        <option value="$PROJECT_DIR$/mods/js/chartSpots.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/mods/js/chartLinesDirective.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartBarsHorizontal.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartBars.js" />
         <option value="$PROJECT_DIR$/mods/chart.js" />
         <option value="$PROJECT_DIR$/mainContenat.json" />
         <option value="$PROJECT_DIR$/mainContentRanad.php" />
         <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/mods/js/chartLineBars.js" />
         <option value="$PROJECT_DIR$/mods/getData.js" />
+        <option value="$PROJECT_DIR$/mainContentjson.php" />
+        <option value="$PROJECT_DIR$/mainContentOneLinejson.php" />
+        <option value="$PROJECT_DIR$/mods/js/chartBars.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartBarsHorizontal.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartLineBars.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartSpots.js" />
       </list>
     </option>
   </component>
@@ -374,6 +361,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mods" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mods" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -573,8 +578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/gridstack/demo/index.html" />
-    <entry file="file://$PROJECT_DIR$/node_modules/gridstack/demo/responsive.html" />
     <entry file="file://$PROJECT_DIR$/node_modules/gridstack/karma.conf.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/gridstack/README.md" />
     <entry file="file://$PROJECT_DIR$/node_modules/gridstack/node_modules/jquery-ui/Gruntfile.js" />
@@ -665,33 +668,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentOneLine.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainContentRandOneLine.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartRadar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartSpots.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -769,6 +749,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainContenat.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/getData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+          <folding>
+            <element signature="n#!!doc;n#getData#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContent.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRanad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentOneLine.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentOneLinejson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartBars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartBarsHorizontal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177">
+          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartDougnut.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -777,10 +853,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartLines.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <state relative-caret-position="510">
+          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -809,99 +893,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartBarsHorizontal.js">
+    <entry file="file://$PROJECT_DIR$/mods/js/chartRadar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="19" selection-start-line="22" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartBars.js">
+    <entry file="file://$PROJECT_DIR$/mods/js/chartSpots.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainContent.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainContenat.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRanad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="-149">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        <state relative-caret-position="306">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/chart.js">
+    <entry file="file://$PROJECT_DIR$/mainContentjson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/getData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding>
-            <element signature="n#!!doc;n#getData#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

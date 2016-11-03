@@ -20,7 +20,7 @@ appChart
             this.LabelsLineChart1;
 
 
-            $http({method: 'GET', url: 'mainContentOneLine.json'})
+            $http({method: 'GET', url: 'mainContentOneLinejson.php'})
                 .success(function (data, status, headers, config) {
 
                     this.DatasetLineChart1 = data['series'];

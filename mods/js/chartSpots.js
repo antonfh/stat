@@ -17,7 +17,7 @@ appChart
             
             $scope.series = ['Series A', 'Series B'];
 
-            $http({method: 'GET', url: 'mainContent.json'})
+            $http({method: 'GET', url: 'mainContentjson.php'})
             .success(function (data, status, headers, config) {
                 this.Dataset1 = data['series'];
                 this.Labels1 = data['labels'];

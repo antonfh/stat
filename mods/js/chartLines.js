@@ -28,7 +28,7 @@ appChart
                 }
             ];
 
-            $http({method: 'GET', url: 'mainContentOneLine.json'})
+            $http({method: 'GET', url: 'mainContentOneLinejson.php'})
                 .success(function (datalc1, status, headers, config) {
                     this.DatasetLineChart1 = datalc1['series'];
                     this.LabelsLineChart1 = datalc1['labels'];

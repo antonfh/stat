@@ -17,7 +17,7 @@ appChart
             this.Datasetclb;
             this.Labelsclb;
 
-            getDataObj = getData('mainContent.json', $http);
+            getDataObj = getData('mainContentjson.php', $http);
 
             getDataObj.then(function(data) {
 
