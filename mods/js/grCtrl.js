@@ -8,7 +8,7 @@
  * @requires $scope
  * */
 
-var appChart = angular.module("appChart", ["chart.js", angularChartist]);
+var appChart = angular.module("appChart", ["chart.js"]);
 // Optional configuration
     appChart.config(['ChartJsProvider', function (ChartJsProvider) {
         // Configure all charts

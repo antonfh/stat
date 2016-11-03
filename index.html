@@ -7,19 +7,18 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="node_modules/lodash/lodash.min.js"></script>
-
+    <script src="mods/getData.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>-->
-   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-
-    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="node_modules/gridstack/dist/gridstack.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="bower_components/chartist/dist/chartist.min.js"></script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css">
+    <!--<script src="chart.js"></script>-->
 
 </head>
 <body ng-app="appChart">
@@ -27,54 +26,112 @@
 <div class="container">
     <div class="row">
 
+        <div ng-controller="MyController as main">
+        <line-chart height="250px" data="main.data"></line-chart>
+        </div>
         <div class="grid-stack" >
 
-            <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">
-                <div class="grid-stack-item-content" ng-controller="LineCtrl">
-                    <div class="graph_container"  style="background: yellow; padding: 15px" >
-                    Bubble chart
-                    <br />
-                    <canvas class="chart chart-line" chart-data="data"
-                            chart-labels="labels" chart-series="series" chart-options="options"
-                            chart-dataset-override="datasetOverride" chart-click="onClick">
-                    </canvas>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">-->
+                <!--<div class="grid-stack-item-content" ng-controller="LineCtrl">-->
+                    <!--<div class="graph_container" >-->
+                    <!--Bubble chart-->
+                    <!--<br />-->
+                    <!--<canvas class="chart chart-line"-->
+                            <!--id="jk33434kjk"-->
+                            <!--chart-data="data"-->
+                            <!--chart-labels="labels"-->
+                            <!--chart-series="series"-->
+                            <!--chart-options="options"-->
+                            <!--chart-dataset-override="datasetOverride"-->
+                            <!--chart-click="onClick">-->
+                    <!--</canvas>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <div  class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
                 <div class="grid-stack-item-content" ng-controller="BarLineCtrl">
-                    <div class="graph_container"  style="background: lightgray; padding: 15px" >
+                    <div class="graph_container" >
                     Line & Bar chart combined
                     <br />
-                    <canvas id="base1" class="chart-bar" chart-data="data" chart-labels="labels" chart-colors="colors"
-                            chart-dataset-override="datasetOverride">
+                    <canvas
+                            id="base134343434"
+                            class="chart-bar"
+                            chart-data="data"
+                            chart-labels="labels"
+                            chart-colors="colors"
+                            chart-dataset-override="datasetOverride"
+                    >
                     </canvas>
                         </div>
                 </div>
             </div>
 
-
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content" ng-controller="LineCtrl2">
-                    <div class="graph_container"  style="background: lightskyblue; padding: 15px" >
-                        Line chart
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+                <div class="grid-stack-item-content" ng-controller="BarLineCtrl">
+                    <div class="graph_container" >
+                        Line & Bar chart combined 2
                         <br />
-                        <canvas id="line" class="chart chart-line" chart-data="data"
-                                chart-labels="labels" chart-series="series" chart-options="options"
-                                chart-dataset-override="datasetOverride" chart-click="onClick">
+                        <canvas
+                                id="base13434343ffffdfdfdf4"
+                                class="chart-bar"
+                                chart-data="data"
+                                chart-labels="labels"
+                                chart-colors="colors"
+                                chart-dataset-override="datasetOverride"
+                        >
                         </canvas>
                     </div>
                 </div>
             </div>
 
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+                <div class="grid-stack-item-content" ng-controller="BarLineCtrl2">
+                    <div class="graph_container" >
+                        Line & Bar chart combined 3
+                        <br />
+                        <canvas
+                                id="bas232323e13434343ffffdfdfdf4"
+                                class="chart-bar"
+                                chart-data="data22"
+                                chart-labels="labels22"
+                                chart-colors="colors"
+                                chart-dataset-override="datasetOverride"
+                        >
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div  class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">-->
+                <!--<div  class="grid-stack-item-content">-->
+                    <!--<div class="graph_container">-->
+                        <!--Line chart-->
+                        <!--<br />-->
+                        <!--<div ng-controller="BarChart1 as Chartist">-->
+                            <!--<div style="padding: 15px" >-->
+                                <!--<br />-->
+                                <!--<chartist class="ct-chart" chartist-data="Chartist.chartistbarData" chartist-chart-type="{{Chartist.Type}}" chartist-chart-options="Chartist.chartOptions"  chartist-responsive-options="Chartist.barResponsiveOptions"></chartist>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
             <div  class="grid-stack-item" data-gs-x="5" data-gs-y="5" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content"  ng-controller="BarChart1">
-                    <div class="graph_container"  style="background: lightgoldenrodyellow; padding: 15px" >
+                <div  class="grid-stack-item-content"  ng-controller="LineCtrl2">
+                    <div class="graph_container" >
                         Bar chart
                         <br />
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels" chart-series="series">
+                        <canvas  id="xx2323232323"
+                                 class="chart chart-line"
+                                 chart-data="data1"
+                                 chart-labels="labels1"
+                                 chart-series="series"
+                                 chart-options="options"
+                                 chart-dataset-override="datasetOverridecl"
+                                 chart-click="onClick"
+                        >
                         </canvas>
                         </div>
                 </div>
@@ -82,7 +139,7 @@
 
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="pieCtrl">
-                    <div class="graph_container"  style="background: lavenderblush; padding: 15px" >
+                    <div class="graph_container"  >
                         Pie chart
                         <br />
                         <canvas id="pie" class="chart chart-pie"
@@ -97,8 +154,13 @@
                     <div class="graph_container"  style="background: lightcyan; padding: 15px" >
                         Bar chart horizontal
                         <br />
-                        <canvas id="base" class="chart-horizontal-bar"
-                                chart-data="data" chart-labels="labels" >
+                        <canvas id="base123"
+                                class="chart chart-horizontal-bar"
+                                chart-data="databc"
+                                chart-labels="labelsbc"
+                                chart-colors="colorsbc"
+                                chart-dataset-override="datasetOverridebc"
+                        >
                         </canvas>
                     </div>
                 </div>
@@ -106,7 +168,7 @@
 
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="polarCtrl">
-                    <div class="graph_container"  style="background: lavenderblush; padding: 15px" >
+                    <div class="graph_container"   >
                         Polar chart
                         <br />
                         <canvas id="polar-area" class="chart chart-polar-area"
@@ -139,16 +201,6 @@
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="20" data-gs-width="10" data-gs-height="3">
-                <div  class="grid-stack-item-content"  ng-controller="BarChart1 as Chartist">
-                    <div class="graph_container"  style="padding: 15px" >
-                        x chart
-                        <br />
-                            <chartist class="ct-chart" chartist-data="Chartist.chartistbarData" chartist-chart-type="{{Chartist.Type}}" chartist-chart-options="Chartist.chartOptions"  chartist-responsive-options="Chartist.barResponsiveOptions"></chartist>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
 
@@ -157,13 +209,7 @@
 
 
 
-<div ng-controller="BarChart1 as Chartist">
-    <div style="padding: 15px" >
-        x chart
-        <br />
-        <chartist class="ct-chart" chartist-data="Chartist.chartistbarData" chartist-chart-type="{{Chartist.Type}}" chartist-chart-options="Chartist.chartOptions" ></chartist>
-    </div>
-</div>
+
 
 <br />
 <br />

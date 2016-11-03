@@ -32,7 +32,9 @@ appChart
 
 
             // Simulate async data update
-            $interval(function () {
+            chartspots = $interval;
+
+            chartspots(function () {
 
                 $http({method: 'GET', url: 'mainContentRand.php'})
                 .success(function (data, status, headers, config) {
@@ -58,7 +60,7 @@ appChart
                 .error(function (data, status, headers, config) {
                     console.log('Data error' + status)
                 });
-            }, 44500, $http);
+            }, 72000, $http);
         }]
     )
 ;

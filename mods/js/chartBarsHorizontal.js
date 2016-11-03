@@ -14,6 +14,8 @@ appChart
     .controller("BarChartHoriz1", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
 
+            $scope.colorsbc = ['#45b7cd', '#ff6384', '#ff8e72'];
+
             this.DatasetLineChart1;
             this.LabelsLineChart1;
 
@@ -24,8 +26,8 @@ appChart
                     this.DatasetLineChart1 = data['series'];
                     this.LabelsLineChart1 = data['labels'];
 
-                    $scope.data = data['series'];
-                    $scope.labels = data['labels'];
+                    $scope.databc = data['series'];
+                    $scope.labelsbc = data['labels'];
                 })
                 .error(function (data, status, headers, config) {
                     console.log('Data error' + status)
@@ -34,7 +36,8 @@ appChart
 
 
             // Simulate async data update
-            $interval(function () {
+            chartHoriz = $interval;
+            chartHoriz(function () {
 
                 $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
                     .success(function (data, status, headers, config) {
@@ -47,16 +50,26 @@ appChart
 
                         setLabelsLineChart1 = LabelsLineChart1;
                         setLabelsLineChart1.shift();
-                        setLabelsLineChart1.push(data['labels']);
+                        setLabelsLineChart1.push(data['labels'][0]);
 
-                        $scope.data = DatasetLineChart1;
-                        $scope.labels = setLabelsLineChart1;
+                        $scope.databc = DatasetLineChart1;
+                        $scope.labelsbc = setLabelsLineChart1;
 
                     })
                     .error(function (data, status, headers, config) {
                         console.log('Data error' + status)
                     });
-            }, 50000, $http);
+            }, 72000, $http);
+
+            $scope.datasetOverridebc = [
+                {
+                    label: "Line chart",
+                    borderWidth: 3,
+                    hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                    hoverBorderColor: "rgba(255,99,132,1)",
+                    type: 'line'
+                }
+            ];
 
         }])
 ;

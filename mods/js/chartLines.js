@@ -13,59 +13,64 @@
 appChart
     .controller("LineCtrl2", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
-            $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
+            $scope.colors = ['#ff6384', '#ff8e72'];
             this.DatasetLineChart1;
             this.LabelsLineChart1;
 
 
+            $scope.datasetOverridecl = [
+                {
+                    label: "Line chart",
+                    borderWidth: 3,
+                    hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                    hoverBorderColor: "rgba(255,99,132,0.6)",
+                    type: 'BarCtrl'
+                }
+            ];
+
             $http({method: 'GET', url: 'mainContentOneLine.json'})
-                .success(function (data, status, headers, config) {
+                .success(function (datalc1, status, headers, config) {
+                    this.DatasetLineChart1 = datalc1['series'];
+                    this.LabelsLineChart1 = datalc1['labels'];
 
-                    this.DatasetLineChart1 = data['series'];
-                    this.LabelsLineChart1 = data['labels'];
-
-                    $scope.data = data['series'];
-                    $scope.labels = data['labels'];
+                    $scope.data1 = datalc1['series'];
+                    $scope.labels1 = datalc1['labels'];
                 })
-                .error(function (data, status, headers, config) {
+                .error(function (datalc1, status, headers, config) {
                     console.log('Data error' + status)
                 });
 
 
-
             // Simulate async data update
-            $interval(function () {
+            chartlines = $interval;
+            charthttp = $http;
+            chartlines(function () {
 
-                $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
-                    .success(function (data, status, headers, config) {
+                charthttp({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
+                    .success(function (datacl) {
+                        console.log('LineCtrl2');
+                        console.log(datacl);
 
                         set1 = DatasetLineChart1;
                         set1.shift();
-                        set1.push(data['series'][0]);
+                        set1.push(datacl['series'][0]);
 
                         DatasetLineChart1 = set1;
 
                         setLabelsLineChart1 = LabelsLineChart1;
                         setLabelsLineChart1.shift();
-                        setLabelsLineChart1.push(data['labels']);
+                        setLabelsLineChart1.push(datacl['labels'][0]);
 
-                        $scope.data = DatasetLineChart1;
-                        $scope.labels = setLabelsLineChart1;
+                        $scope.data1 = DatasetLineChart1;
+                        $scope.labels1 = setLabelsLineChart1;
 
                     })
-                    .error(function (data, status, headers, config) {
+                    .error(function (datacl, status) {
+
                         console.log('Data error' + status)
                     });
-            }, 26000, $http);
+            }, 72000);
 
-            $scope.datasetOverride = [
-                {
-                    label: "Line chart",
-                    borderWidth: 3,
-                    hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                    hoverBorderColor: "rgba(255,99,132,1)",
-                    type: 'line'
-                }
-            ];
+
         }])
 ;
