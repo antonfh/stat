@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRand.php" afterPath="$PROJECT_DIR$/mainContentRand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLineBars.js" afterPath="$PROJECT_DIR$/mods/js/chartLineBars.js" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,8 +82,8 @@
       <file leaf-file-name="mainContentRand.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainContentRand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -919,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainContentRand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding />
         </state>
       </provider>
