@@ -46,7 +46,7 @@ appChart
             test = $interval;
             test(function () {
 
-                getDataObj = getData('mainContentRand.php', $http);
+                getDataObj = getData('mainContentRantestd.php', $http);
 
                 getDataObj.then(function(dataw, Datasetclb, Labelsclb) {
 
@@ -70,7 +70,7 @@ appChart
                     setLabelsclb.shift();
                     setLabelsclb.push(dataw.data.labels[0]);
 
-                    $scope.data = Datasetclb;
+                    $scope.data = Dataset;
                     $scope.labels = setLabelsclb;
                 });
             }, 72000, $http);
