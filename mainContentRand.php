@@ -7,10 +7,10 @@ $dte = Date("H:i");
 
 $ddata =<<< EOT
 {"series":[
-['$rnd1'],
-['$rnd2']
+[$rnd1],
+[$rnd2]
   ]
-  ,"labels" : ['$dte']
+  ,"labels" : ["$dte"]
 }
 EOT;
 

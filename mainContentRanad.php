@@ -6,10 +6,10 @@ $rnd2 = rand(-100, 100);
 $dte = Date("H:i");
 $ddata =<<< EOT
 {"series":[
-['$rnd1'],
-['$rnd2']
+[$rnd1],
+[$rnd2]
   ]
-  ,"labels" : ['$dte']
+  ,"labels" : ["$dte"]
 }
 EOT;
 echo $ddataa;
