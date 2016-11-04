@@ -12,4 +12,4 @@ $ddata =<<< EOT
   ,"labels" : ["$dte"]
 }
 EOT;
-echo $ddataa;
+echo $ddata;
