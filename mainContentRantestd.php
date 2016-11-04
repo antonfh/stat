@@ -5,14 +5,11 @@ $rnd1 = rand(-100, 100);
 $rnd2 = rand(-100, 100);
 $dte = Date("H:i");
 
-$ddata =<<< EOT
-{"series":[
-[$rnd1],
-[$rnd2]
-  ]
-  ,"labels" : ["$dte"]
-}
-EOT;
+
+$arr['series'][0] = $rnd1;
+$arr['series'][1] = $rnd2;
+$arr['labels'] = $dte;
 
 
-echo $ddata;
+
+echo json_encode($arr);
