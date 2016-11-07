@@ -53,22 +53,25 @@ appChart
                     Datasetclb = dataw.data.series;
                     Labelsclb = dataw.data.labels;
 
-                    set1clb = Datasetclb[0];
-                    set2clb = Datasetclb[1];
+                    console.log('xxxxx');
+                    console.log(dataw);
+
+                    set1clb = '{'+Datasetclb[0]+'}';
+                    set2clb = '{'+Datasetclb[1]+'}';
 
                     set1clb.shift();
                     set2clb.shift();
 
                     console.log('Interval 62:');
                     console.log(dataw);
-                    set1clb.push(dataw.data.series[0][0]);
-                    set2clb.push(dataw.data.series[1][0]);
+                    set1clb.push(dataw.data.series[0]);
+                    set2clb.push(dataw.data.series[1]);
 
                     Dataset = [set1clb,set2clb];
 
                     setLabelsclb = Labelsclb;
                     setLabelsclb.shift();
-                    setLabelsclb.push(dataw.data.labels[0]);
+                    setLabelsclb.push(dataw.data.labels);
 
                     $scope.data = Dataset;
                     $scope.labels = setLabelsclb;
@@ -119,7 +122,8 @@ appChart
 
                         set1clb2 = Datasetclb2[0];
                         set2clb2 = Datasetclb2[1];
-
+console.log('lb3');
+                        console.log(data2);
                         set1clb2.shift();
                         set2clb2.shift();
                         set1clb2.push(data2['series'][0][0]);
