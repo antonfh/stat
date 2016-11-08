@@ -3,9 +3,17 @@
  */
 function getData(call, $http) {
 
-    return $http({method: 'GET', url: 'http://psapi.anton.co.za/' + call + ''})
+    return $http(
+        {
+            method: 'GET',
+            url: 'http://psapi.anton.co.za/' + call + ''
+        })
         .success(function (datas, status, headers, config, scopedataset) {
-            sc = {scopedata: datas['series'], scopelabels: datas['labels']};
+
+            sc = {
+                    scopedata: datas['series'],
+                    scopelabels: datas['labels']
+            };
 
         })
         .error(function (datas, status, headers, config) {
