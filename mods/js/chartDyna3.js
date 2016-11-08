@@ -67,7 +67,8 @@ appChart
                         labels: setLabels3,
                         datasets: [{
                             fill: true,
-                            data: setSeries3
+                            data: setSeries3,
+                            label: 'Demo'
                         }]
                     }
                 })

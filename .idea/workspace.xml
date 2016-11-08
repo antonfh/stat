@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mods/js/chartDyna.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mods/js/chartDyna2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mods/js/chartDyna3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRantestd.php" afterPath="$PROJECT_DIR$/mainContentRantestd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/getData.js" afterPath="$PROJECT_DIR$/mods/getData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLineBars.js" afterPath="$PROJECT_DIR$/mods/js/chartLineBars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLines.js" afterPath="$PROJECT_DIR$/mods/js/chartLines.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDyna3.js" afterPath="$PROJECT_DIR$/mods/js/chartDyna3.js" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,8 +85,8 @@
       <file leaf-file-name="chartDyna3.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDyna3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="578">
+              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -875,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartDyna3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="578">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
           <folding />
         </state>
       </provider>
