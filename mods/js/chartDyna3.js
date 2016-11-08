@@ -61,7 +61,7 @@ appChart
                 setLabels3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                 setSeries3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                 myChartDyna3 = new Chart(document.getElementById("baseXDyna3"), {
-                    type: 'line',
+                    type: 'bar',
                     options: optionsDyna3,
                     data: {
                         labels: setLabels3,
@@ -85,7 +85,7 @@ appChart
                     myChartDyna3.data.labels = setLabels3;
                     myChartDyna3.data.datasets[0].data = setSeries3;
                     myChartDyna3.update();
-                }, 75000);
+                }, 35000);
 
                 update_data3($http);
 
