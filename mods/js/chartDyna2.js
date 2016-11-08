@@ -18,6 +18,11 @@ var myChartDyna2,
 
 optionsDyna2 = {
     responsive: true,
+    title: {
+        display: true,
+        position: 'top',
+        text: 'Update Chart Nr 2'
+    },
     legend: {
         display: false
     },

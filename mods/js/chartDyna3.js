@@ -18,8 +18,16 @@ var myChartDyna3,
 
 optionsDyna3 = {
     responsive: true,
+    title: {
+      display: true,
+        position: 'top',
+        text: 'Update Chart Nr 3'
+    },
     legend: {
-        display: true
+        display: true,
+        labels: {
+            fontColor: 'rgb(255, 99, 132)'
+        }
     },
     scales: {
         yAxes: [{
@@ -68,7 +76,12 @@ appChart
                         datasets: [{
                             fill: true,
                             data: setSeries3,
-                            label: 'Demo'
+                            label: 'Demo',
+                            // X Value of the tooltip as a string
+                            xLabel: 'x-label',
+
+                            // Y value of the tooltip as a string
+                            yLabel: 'y-label',
                         }]
                     }
                 })
