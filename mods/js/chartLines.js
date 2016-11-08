@@ -48,8 +48,6 @@ appChart
 
                 charthttp({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
                     .success(function (datacl) {
-                        console.log('LineCtrl2');
-                        console.log(datacl);
 
                         set1 = DatasetLineChart1;
                         set1.shift();

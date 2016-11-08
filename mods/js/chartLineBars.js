@@ -8,24 +8,55 @@
  * @requires $scope
  * */
 
+var myChart2, options;
 
+options = {
+    responsive: true,
+    legend: {
+        display: false
+    },
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+};
+// Optional configuration
 appChart
     .controller("BarLineCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
-            $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
 
+
+
+            $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
             this.Datasetclb;
             this.Labelsclb;
 
-            getDataObj = getData('mainContentjson.php', $http);
+            $http({method: 'GET', url: 'mainContent.json'})
+                .success(function (data, status, headers, config) {
 
-            getDataObj.then(function(data) {
+                    mycharttest = new Chart(document.getElementById("baseX2"),{
+                        type: 'line',
+                        options: options,
+                        data: {
+                            labels: data['labels'],
+                            datasets: [{
+                                fill: true,
+                                data: data['series'][0]
+                            }]
+                        }
+                    })
+                    this.Datasetclb = data['series'];
+                    this.Labelsclb = data['labels'];
 
-                Datasetclb = data.data.series;
-                Labelsclb = data.data.labels;
-                $scope.data = Datasetclb;
-                $scope.labels = Labelsclb;
-            });
+                    $scope.data = data['series'];
+                    $scope.labels = data['labels'];
+                })
+                .error(function (data, status, headers, config) {
+                    console.log('Data error' + status)
+                });
 
             $scope.datasetOverride = [
                 {
@@ -42,40 +73,35 @@ appChart
                 }
             ];
 
+
             // Simulate async data update
             test = $interval;
             test(function () {
 
-                getDataObj = getData('mainContentRantestd.php', $http);
+                $http({method: 'GET', url: 'mainContentRand.php'})
+                    .success(function (data, status, headers, config) {
 
-                getDataObj.then(function(dataw, Datasetclb, Labelsclb) {
+                        set1clb = Datasetclb[0];
+                        set2clb = Datasetclb[1];
 
-                    Datasetclb = dataw.data.series;
-                    Labelsclb = dataw.data.labels;
+                        set1clb.shift();
+                        set2clb.shift();
+                        set1clb.push(data['series'][0][0]);
+                        set2clb.push(data['series'][1][0]);
 
-                    console.log('xxxxx');
-                    console.log(dataw);
+                        Dataset = [set1clb,set2clb];
 
-                    set1clb = '{'+Datasetclb[0]+'}';
-                    set2clb = '{'+Datasetclb[1]+'}';
+                        setLabelsclb = Labelsclb;
+                        setLabelsclb.shift();
+                        setLabelsclb.push(data['labels'][0]);
 
-                    set1clb.shift();
-                    set2clb.shift();
+                        $scope.data = Datasetclb;
+                        $scope.labels = setLabelsclb;
 
-                    console.log('Interval 62:');
-                    console.log(dataw);
-                    set1clb.push(dataw.data.series[0]);
-                    set2clb.push(dataw.data.series[1]);
-
-                    Dataset = [set1clb,set2clb];
-
-                    setLabelsclb = Labelsclb;
-                    setLabelsclb.shift();
-                    setLabelsclb.push(dataw.data.labels);
-
-                    $scope.data = Dataset;
-                    $scope.labels = setLabelsclb;
-                });
+                    })
+                    .error(function (data, status, headers, config) {
+                        console.log('Data error' + status)
+                    });
             }, 72000, $http);
         }])
     .controller("BarLineCtrl2", ['$scope', '$interval', '$http',
@@ -84,7 +110,7 @@ appChart
             this.Datasetclb2;
             this.Labelsclb2;
 
-            $http({method: 'GET', url: 'mainContenatjson.php'})
+            $http({method: 'GET', url: 'mainContenat.json'})
                 .success(function (data2, status, headers, config) {
 
                     this.Datasetclb2 = data2['series'];
@@ -122,8 +148,7 @@ appChart
 
                         set1clb2 = Datasetclb2[0];
                         set2clb2 = Datasetclb2[1];
-console.log('lb3');
-                        console.log(data2);
+
                         set1clb2.shift();
                         set2clb2.shift();
                         set1clb2.push(data2['series'][0][0]);

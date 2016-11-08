@@ -5,11 +5,11 @@ $rnd1 = rand(-100, 100);
 $rnd2 = rand(-100, 100);
 $dte = Date("H:i");
 
+$arr = null;
 
 $arr['series'][0][0] = $rnd1;
 $arr['series'][1][0] = $rnd2;
 $arr['labels'][0] = $dte;
-
 
 
 echo json_encode($arr);
