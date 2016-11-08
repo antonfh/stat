@@ -69,19 +69,31 @@ appChart
                 setLabels3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                 setSeries3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                 myChartDyna3 = new Chart(document.getElementById("baseXDyna3"), {
-                    type: 'bar',
+                    type: 'line',
                     options: optionsDyna3,
                     data: {
                         labels: setLabels3,
                         datasets: [{
-                            fill: true,
+                            fill: false,
                             data: setSeries3,
                             label: 'Demo',
-                            // X Value of the tooltip as a string
-                            xLabel: 'x-label',
-
-                            // Y value of the tooltip as a string
-                            yLabel: 'y-label',
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(75,192,192,0.4)",
+                            borderColor: "rgba(75,192,192,1)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(75,192,192,1)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                            pointHoverBorderColor: "rgba(220,220,220,1)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 1,
+                            pointHitRadius: 10,
+                            spanGaps: true,
                         }]
                     }
                 })
