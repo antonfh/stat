@@ -4,7 +4,7 @@ date_default_timezone_set('Africa/Johannesburg');
 
 $rnd1 = rand(-100, 100);
 $rnd2 = rand(-100, 100);
-$dte = Date("H:i");
+$dte = Date("H:i:s");
 
 $ddata =<<< EOT
 {
