@@ -100,7 +100,7 @@ console.log(Datasetclb);
                     .error(function (data, status, headers, config) {
                         console.log('Data error' + status)
                     });
-            }, 72000, $http);
+            }, 9972000, $http);
         }])
     .controller("BarLineCtrl2", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
@@ -165,7 +165,7 @@ console.log(Datasetclb);
                     .error(function (data2, status, headers, config) {
                         console.log('Data error' + status)
                     });
-            }, 72000, $http);
+            }, 99972000, $http);
         }])
     .controller('MyController', ['$scope', function($scope) {
         this.data = [{
