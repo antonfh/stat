@@ -1,6 +1,6 @@
 /**
  * @ngdoc controller
- * @name myapp:grCtrl
+ * @name appChart:BarLineCtrl
  *
  * @description
  *
@@ -23,12 +23,11 @@ options = {
         }]
     }
 };
-// Optional configuration
+
+(function(){
 appChart
     .controller("BarLineCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
-
-
 
             $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
             this.Datasetclb;
@@ -75,8 +74,7 @@ appChart
 
 
             // Simulate async data update
-            test = $interval;
-            test(function () {
+            $interval(function () {
 
                 $http({method: 'GET', url: 'mainContentRand.php'})
                     .success(function (data, status, headers, config) {
@@ -255,3 +253,4 @@ appChart
         }
     }])
 ;
+})();
