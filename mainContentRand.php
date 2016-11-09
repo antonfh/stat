@@ -15,4 +15,14 @@ $ddata =<<< EOT
 EOT;
 
 
-echo $ddata;
+//echo $ddata;
+
+
+$arr = null;
+
+$arr['series'][0][0] = $rnd1;
+$arr['series'][1][0] = $rnd2;
+$arr['labels'][0] = $dte;
+
+
+echo json_encode($arr);
