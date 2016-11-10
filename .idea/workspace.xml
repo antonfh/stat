@@ -2,9 +2,230 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chartjs-directive/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chartjs-directive/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chartjs-directive/chartjs-directive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/bulletChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/cumulativeLineChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/discreteBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/discreteBar.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/discreteBar.with.event.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/event.lineChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/historicalBarChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.108.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.108.nvd3.native.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.113.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.114.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.133.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.133.t1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.133.t2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.152.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.156.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.30.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.37.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue.49.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/issue51.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/js/angular-route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/js/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/js/d3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/js/moment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/js/nv.d3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/legendDirective.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/linChart.min.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.d3.native.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.tickValue.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.ticks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.with.configuration.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineChart.with.ngRepeat.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/linePlusBarChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/linePlusBarChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/lineWithFocusChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/liveData.example.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/multiBarChart.clipping.nvd3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/multiBarChart.clippingData.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/multiBarChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/multiBarHorizontalChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/mutiBarChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/nvd3.callback.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/objectEquality.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/pie.donut.chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/pieChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/pieChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/refresh.example.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/scatterChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/scatterChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/sparklineChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/stackedAreaChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/stackedAreaChart.with.automatic.resize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/stylesheets/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/stylesheets/nv.d3.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/examples/ticks.d3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/intro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/legendDirectives.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/nvD3AxisConfiguration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/nvD3Events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/nvD3LegendConfiguration.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/nvd3Directives.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angularjs-nvd3-directives/src/directives/outro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/aliases.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/jshint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/tasks/umd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/ct-threshold-demo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/dist/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/dist/chartist-plugin-threshold.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/aliases.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/jshint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-threshold/tasks/umd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/demo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/dist/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/dist/chartist-plugin-zoom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/dist/chartist-plugin-zoom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/dist/chartist-plugin-zoom.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/aliases.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/jshint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/uglify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist-plugin-zoom/tasks/umd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/CODINGSTYLE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/LICENSE-MIT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/LICENSE-WTFPL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/chartist.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/scss/chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartist/dist/scss/settings/_chartist-settings.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/build/chartistAngularDirective.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/specs/chartistAngularDirective.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/chartistAngularDirective.js/src/chartistAngularDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/d3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/d3/d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/nvd3/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/nvd3/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/nvd3/meteor/export.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/nvd3/package.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.babelrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.eslintrc.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.jsbeautifyrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/sort-arrow-sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/sorter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/src/angular-chartist.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov-report/src/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/coverage/lcov.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/dist/angular-chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/dist/angular-chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/angular-chartist.js/src/angular-chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/LICENSE-MIT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/LICENSE-WTFPL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/chartist.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/scss/chartist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/dist/scss/settings/_chartist-settings.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/chartist/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.with-extras.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/dist/jquery.gridster.with-extras.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.collision.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.coords.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.draggable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.gridster.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.gridster.extras.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/jquery.gridster.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/src/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/test/jquery.gridder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/gridster/test/jquery.gridder_test.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRandOneLine.php" afterPath="$PROJECT_DIR$/mainContentRandOneLine.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRand.php" afterPath="$PROJECT_DIR$/mainContentRand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainContentRantestd.php" afterPath="$PROJECT_DIR$/mainContentRantestd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/getData.js" afterPath="$PROJECT_DIR$/mods/getData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDyna.js" afterPath="$PROJECT_DIR$/mods/js/chartDyna.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDyna2.js" afterPath="$PROJECT_DIR$/mods/js/chartDyna2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLineBars.js" afterPath="$PROJECT_DIR$/mods/js/chartLineBars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/grCtrl.js" afterPath="$PROJECT_DIR$/mods/js/grCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,14 +246,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+            <state relative-caret-position="153">
+              <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,10 +273,10 @@
       <file leaf-file-name="chartLineBars.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
+            <state relative-caret-position="199">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="38" />
               <folding>
-                <element signature="e#3890#4322#0" expanded="false" />
+                <element signature="e#3866#4298#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,7 +285,7 @@
       <file leaf-file-name="jquery.ui.touch-punch.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/jquery/dist/jquery.ui.touch-punch.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="17">
               <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -77,9 +297,11 @@
       <file leaf-file-name="chartDyna.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDyna.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="938">
+              <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +309,20 @@
       <file leaf-file-name="chartDyna2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDyna2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="-510">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="44" column="45" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -97,7 +331,7 @@
       <file leaf-file-name="chartDyna3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDyna3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="714">
               <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding />
             </state>
@@ -107,30 +341,8 @@
       <file leaf-file-name="getData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/getData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-              <folding>
-                <element signature="n#!!doc;n#getData#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainContenat.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainContenat.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainContenatjson.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainContenatjson.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="401">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -139,8 +351,8 @@
       <file leaf-file-name="mainContentRand.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainContentRand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -149,8 +361,8 @@
       <file leaf-file-name="mainContentRantestd.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainContentRantestd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -219,14 +431,26 @@
       <file leaf-file-name="grCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="340">
+              <caret line="20" column="56" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="56" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-chart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1309">
+              <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainContentRandOneLine.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainContentRandOneLine.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainContentRandOneLine.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -267,11 +491,9 @@
         <option value="$PROJECT_DIR$/mainContentOneLine.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mainContent.json" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/mods/js/chartLinesDirective.js" />
         <option value="$PROJECT_DIR$/mods/chart.js" />
         <option value="$PROJECT_DIR$/mainContenat.json" />
-        <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
         <option value="$PROJECT_DIR$/mainContentjson.php" />
         <option value="$PROJECT_DIR$/mainContentOneLinejson.php" />
         <option value="$PROJECT_DIR$/mods/js/chartBars.js" />
@@ -280,16 +502,18 @@
         <option value="$PROJECT_DIR$/mainContenatjson.php" />
         <option value="$PROJECT_DIR$/mainContentRanad.php" />
         <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
-        <option value="$PROJECT_DIR$/mainContentRantestd.php" />
-        <option value="$PROJECT_DIR$/mods/js/chartDyna2.js" />
         <option value="$PROJECT_DIR$/mods/js/chartDyna3.js" />
-        <option value="$PROJECT_DIR$/mods/getData.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartDyna.js" />
         <option value="$PROJECT_DIR$/node_modules/jquery/dist/jquery.ui.touch-punch.min.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartLineBars.js" />
         <option value="$PROJECT_DIR$/mainContentRandOneLine.php" />
-        <option value="$PROJECT_DIR$/mainContentRand.php" />
+        <option value="$PROJECT_DIR$/mods/getData.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartLineBars.js" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/mods/js/chartDyna.js" />
+        <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartDyna2.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/mainContentRantestd.php" />
+        <option value="$PROJECT_DIR$/mainContentRand.php" />
       </list>
     </option>
   </component>
@@ -334,7 +558,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -431,16 +654,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mods" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -525,7 +745,7 @@
     <frame x="1358" y="-315" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29157782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2947761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -571,13 +791,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/chart.js/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/testDirective.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/jquery-ui/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -637,13 +850,6 @@
         <state relative-caret-position="748">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -854,35 +1060,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartDyna2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/getData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc;n#getData#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/jquery/dist/jquery.ui.touch-punch.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="17">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -890,44 +1070,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRantestd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="167" column="18" selection-start-line="167" selection-start-column="18" selection-end-line="167" selection-end-column="18" />
-          <folding>
-            <element signature="e#3890#4322#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartDyna.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartDyna3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="714">
           <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -940,22 +1086,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRandOneLine.php">
+    <entry file="file://$PROJECT_DIR$/mods/js/chartLineBars.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="199">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <element signature="e#3866#4298#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/getData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartDyna2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRantestd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+        <state relative-caret-position="153">
+          <caret line="65" column="72" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="72" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#9;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartDyna.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="938">
+          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRandOneLine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

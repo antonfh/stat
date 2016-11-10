@@ -81,7 +81,7 @@ appChart
 
                         set1clb = Datasetclb[0];
                         set2clb = Datasetclb[1];
-console.log(Datasetclb);
+
                         set1clb.shift();
                         set2clb.shift();
                         set1clb.push(data['series'][0][0]);
@@ -167,6 +167,11 @@ console.log(Datasetclb);
                     });
             }, 99972000, $http);
         }])
+
+
+
+
+
     .controller('MyController', ['$scope', function($scope) {
         this.data = [{
             key: 'Data',
