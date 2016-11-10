@@ -9,7 +9,7 @@
  * */
 
 
-// Optional configuration
+// appCharts controller radarCtrl
 appChart
     .controller("radarCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {

@@ -1,6 +1,6 @@
 /**
  * @ngdoc controller
- * @name myapp:grCtrl
+ * @name appChart:ChartDyna
  *
  * @description
  *
@@ -8,127 +8,166 @@
  * @requires $scope
  * */
 
+/*
+    Set some global variables for the chart controller
+ */
+var myChartDyna,
+    optionsDynaBars,
+    update_data_bars,
+    setLabelsBars,
+    setSeriesBars,
+    DatasetclbBars,
+    LabelsclbBars;
 
-// Optional configuration
-appChart
-    .controller("BarChart1", ['$scope', '$interval', '$http',
-        function ($scope, $interval, $http) {
+/*
+    ChartJs and the Angular module for ChartJS takes options, you can set a global options object here, refer to:
 
-            this.DatasetLineChart1;
-            this.LabelsLineChart1;
+ https://jtblin.github.io/angular-chart.js/
+ http://www.chartjs.org/
+ http://www.chartjs.org/docs/
 
-            // bar chart
-           /* this.chartistbarData = {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                series: [
-                    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-                    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-                ]
-            };
-*/
-            $http({method: 'GET', url: 'mainContentOneLinejson.php'})
-                .success(function (data, status, headers, config) {
+ Remember you are using Angular and the Angular-chartjs module to build the graphs- angular just builds the functionality on top
+ of ChartJS - So the options below would be some of the options you would find in ChartJS - refer to: http://www.chartjs.org/docs/
 
-                    this.DatasetLineChart1 = data['series'];
-                    this.LabelsLineChart1 = data['labels'];
+ In the code below where you create the Chart object:
 
-                    $scope.databc = data['series'];
-                    $scope.labelsbc = data['labels'];
+ myChartDyna = new Chart(document.getElementById("baseXDyna"), {
+ type: 'line',
+ options: optionsDyna,
 
-                    this.chartistbarData = data;
-                })
-                .error(function (data, status, headers, config) {
-                    console.log('Data error' + status)
-                });
-
-            this.Type = 'Line';
-
-          /*  this.barOptions = {
-                seriesBarDistance: 12
-            };
-            */
-            this.barResponsiveOptions = [
-                ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                    seriesBarDistance: 55,
-                    axisX: {
-                        labelInterpolationFnc: function(value) {
-                            return value;
-                        }
-                    }
-                }],
-                ['screen and (max-width: 640px)', {
-                    seriesBarDistance: 55,
-                    axisX: {
-                        labelInterpolationFnc: function(value) {
-                            return value[0];
-                        }
-                    }
-                }]
-            ];
-
-            this.chartOptions = {
-                showArea: true,
-                axisY: {
-                    onlyInteger: true
-                },
-
-                plugins: [
-                    Chartist.plugins.zoom({ onZoom: function(chart, reset) { storeReset(reset);} }),
-                    Chartist.plugins.ctPointLabels({
-                        labelClass: 'ct-label-point',
-                        labelOffset: {
-                            x: -2,
-                            y: -3
-                        },
-                        textAnchor: 'left'
-                    }),
-                    Chartist.plugins.ctThreshold({
-                        threshold: 6
-                    })
-                ]
-            };
-
-            $http({method: 'GET', url: 'mainContentOneLinejson.php'})
-                .success(function (data, status, headers, config) {
-
-                    this.DatasetLineChart1 = data['series'];
-                    this.LabelsLineChart1 = data['labels'];
-
-                    $scope.data = data['series'];
-                    $scope.labels = data['labels'];
-                })
-                .error(function (data, status, headers, config) {
-                    console.log('Data error' + status)
-                });
-
-
-            // Simulate async data update
-            chartbars = $interval;
-
-            chartbars(function () {
-
-                $http({method: 'GET', url: 'http://psapi.anton.co.za/mainContentRandOneLine.php'})
-                    .success(function (data, status, headers, config) {
-
-                        set1 = DatasetLineChart1;
-                        set1.shift();
-                        set1.push(data['series'][0]);
-
-                        DatasetLineChart1 = set1;
-
-                        setLabelsLineChart1 = LabelsLineChart1;
-                        setLabelsLineChart1.shift();
-                        setLabelsLineChart1.push(data['labels'][0]);
-
-                        $scope.data = DatasetLineChart1;
-                        $scope.labels = setLabelsLineChart1;
-
-                    })
-                    .error(function (data, status, headers, config) {
-                        console.log('Data error' + status)
-                    });
-            }, 72000, $http);
-
+ Notice the line "options" and there is assigned optionsDyna - thus the object below is then assigned to options later
+ */
+optionsDynaBars = {
+    responsive: true,
+    legend: {
+        display: false
+    },
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
         }]
-    )
-;
+    }
+};
+
+/*
+    This is a function you use in the controller below to get new chart data and update the chart
+
+    The function "update_data",  calls another function "getData" (look at mods/getData,js) to get the chart data,
+    The data item structure should be some JSON - which would look like:
+
+         {
+         "series":[-76],
+         "labels":["09:02:16"]
+         }
+     This will add one element to the chart, you have your labels and then your series which is your data to plot
+ */
+(function () {
+    update_data_bars = function ($http) {
+
+        /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
+        getDataObjBars = getData('mainContentRandOneLineBars.php', $http);
+
+        /*
+            This simply takes the returned data object (getDataObj) and assigns the result (the series and labels data)
+            from the returned JSON string to the global variables Datasetclb and Labelsclb
+         */
+        getDataObjBars.then(function (datae) {
+
+            DatasetclbBars = datae.data.series;
+            LabelsclbBars = datae.data.labels;
+
+        });
+
+        /* We define the data object, assigned the data labels and data fields. Notice you will use data then in the
+            controller - where you created the Chart object to assign it then to what data the chart will show
+
+         $interval(function () {
+         dataset = update_data($http);
+
+            This function in the controller calls this function and gets dataset, then uses variable dataset to assign
+            the Series and Label data
+         */
+        data_bars = {
+            data_bars: {
+                labels_bar: Labelsclb,
+                data_bar: Datasetclb
+            },
+        };
+
+        return data_bars;
+    };
+})();
+
+/*
+    Encapsulate appChart in function block, then define our appChart modules controller action function, the index.html
+    file points to the name of the controller here (ChartDynaBars) and uses the function to build the Chart
+ */
+(function () {
+    appChart
+        .controller("ChartDynaBars",
+            ['$scope', '$interval', '$http',
+                function ($scope, $interval, $http) {
+
+                    /* This simply sets a base set of labels and series data to start of the graph - the $interval function
+                        below is what runs at set intervals and gets new chart data and updates the chart
+                     */
+                    setLabelsBars = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    setSeriesBars = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+                    /*
+                        This creates a new Chart object, we assign it to a name (here myChartDyna) - I would suggest each
+                        new chart object you create that you give it a distinct name - else you have some data conflicts
+                        as JS will build all the vars and object on the page - you need to have your vars and objects
+                        with unique names so the web page knows what is what
+
+                        Notice below we have the options and then data items, data is a set of fields again,
+                        where we define the labels (assigned setLabels) to it and then datasets->data (assigned setSeries to it)
+                     */
+                    myChartDynaBars = new Chart(document.getElementById("ChartDynaBars"), {
+                        type: 'bar',
+                        options: optionsDynaBars,
+                        data: {
+                            labels: setLabelsBars,
+                            datasets: [{
+                                fill: true,
+                                data: setSeriesBars
+                            }]
+                        }
+                    });
+
+
+                    /*
+                        To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
+                        function, the function simply takes call function and then the interval time (here 75000)
+
+                        The function itself first gets the data (assigned dataset) - then uses standard shift and push
+                        methods on the setLabels and setSeries global objects. In the push method we then add the data to the
+                        object.
+
+                        dataset is the data returned from calling update_data and the format is:
+
+                        dataset['data']['labels'] and ['data']
+                     */
+                    $interval(function () {
+                        datasetBars = update_data_bars($http);
+
+                        setLabelsBars.shift();
+                        setSeriesBars.shift();
+                        setLabelsBars.push(datasetBars['data_bars']['labels_bar'][0]);
+                        setSeriesBars.push(datasetBars['data_bars']['data_bar'][0]);
+
+                        /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
+                        myChartDynaBars.data.labels = setLabelsBars;
+
+                        /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
+                        myChartDynaBars.data.datasets[0].data = setSeriesBars;
+                        myChartDynaBars.update();
+                    }, 15000); //This is the interval time this function will be run (milliseconds)
+
+                    update_data($http);
+                }
+            ]
+        );
+})();

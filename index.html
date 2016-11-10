@@ -31,48 +31,32 @@
         <div class="grid-stack" >
 
 
-            <!-- This is a Gristack item (a block) You define the grid-stack-item container and content
-                    define the data-gs-x and y items (that sets the position of block then width and height
-                    -->
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">
-                <div class="grid-stack-item-content" ng-controller="BarLineCtrl">
-                    <div class="graph_container">
-                        Fixed filled line chart
-                        <br />
-
-                        <!-- canvas defines the chartjs angular directive - look at:
-                                https://jtblin.github.io/angular-chart.js/
-                                Look at the HTML and Javascript code for examples - the basic one is below,
-                                Notice above = ng-controller , assigned the controller "BarLineCtrl"
-                                That is the name of the Angular controller (go to: mods/js/chartLineBars.js), fined the line
-                                .controller("BarLineCtrl", - that is the controller name (it tells this Div block what controller to run
-                                The controller is basically a function, in the function notice how we setup the chart and link to
-                                canvas id baseX2. We create a new Chart object (look for the following in that controller):
-                                mycharttest = new Chart(document.getElementById("baseX2"),{
-                                Notice we use getElementByID to reference the id baseX2 below, so all of the action getting the data,
-                                creating the chart object happens in that controller (or any of the other controllers)
-                                -->
-                        <canvas id="baseX2"></canvas>
-                    </div>
-                </div>
-            </div>
 
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
             <div id="widget" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
-                        ChartDyna, look at /mods/js/chartDyna.js
+                        ChartDyna, look at /mods/js/chartLines.js
                         -->
-                <div class="grid-stack-item-content" ng-controller="ChartDyna">
+                <div class="grid-stack-item-content" ng-controller="ChartDynaLine">
                     <div class="graph_container" >
-                        Dynamic updating Line chart (updates every minute)
-                        <br />
-                        <!-- again in the controller - the controller function will create the chart object, assign it the
-                        values and labels and create the chart, then assign or replace the canvas id baseXDyna with
-                        the chart then
+                        <h5>Dynamic updating Line chart (updates every minute)</h5>
 
-                        You will basically just add more gridstack widgets
-                        -->
+                        <!-- canvas defines the chartjs angular directive - look at:
+                                https://jtblin.github.io/angular-chart.js/
+
+                                Look at the HTML and Javascript code for examples - the basic one is below,
+                                Notice above = ng-controller , assigned the controller "ChartDyna"
+                                That is the name of the Angular controller (go to: mods/js/chartLines.js), fined the line
+                                .controller("BarLineCtrl", - that is the controller name (it tells this Div block what controller to run
+                                The controller is basically a function, in the function notice how we setup the chart and link to
+                                canvas id baseXDyna. We create a new Chart object (look for the following in that controller):
+                                mycharttest = new Chart(document.getElementById("baseXDyna"),{
+
+                                Notice we use getElementByID to reference the id baseXDyna below,
+                                so all of the action getting the data,
+                                creating the chart object happens in that controller (or any of the other controllers)
+                                -->
                         <canvas id="baseXDyna"></canvas>
                     </div>
                 </div>
@@ -84,22 +68,34 @@
             <div id="f" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
-                        ChartDyna, look at /mods/js/chartDyna.js
+                        ChartDyna, look at /mods/js/chartLines.js
                         -->
-                <div class="grid-stack-item-content" ng-controller="ChartDyna2">
+                <div class="grid-stack-item-content" ng-controller="ChartDynaBarLines">
                     <div class="graph_container" >
-                        Dynamic updating Line and Bar chart.
-                        <canvas id="baseXDyna2" chart-dataset-override="datasetOverride"></canvas>
+                        <h5>Dynamic updating Line and Bar chart.</h5>
+                        <canvas id="baseXDyna2"></canvas>
                     </div>
                 </div>
             </div>
 
+            <!-- This is another grid block item. Notice data-gs-x and y is different -->
+            <div id="fs" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+
+                <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
+                        ChartDynaBars, look at /mods/js/chartLines.js
+                        -->
+                <div class="grid-stack-item-content" ng-controller="ChartDynaBars">
+                    <div class="graph_container" >
+                        <h5>Dynamic updating Bar chart</h5>
+                        <canvas id="ChartDynaBars"></canvas>
+                    </div>
+                </div>
+            </div>
 
             <div  class="grid-stack-item" data-gs-x="5" data-gs-y="20" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="pieCtrl">
                     <div class="graph_container"  >
-                        Pie chart
-                        <br />
+                        <h5>Pie chart</h5>
                         <canvas id="pie" class="chart chart-pie"
                                 chart-data="data" chart-labels="labels" chart-options="options">
                         </canvas>
@@ -111,8 +107,7 @@
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="25" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="polarCtrl">
                     <div class="graph_container">
-                        Polar chart
-                        <br />
+                        <h5>Polar chart</h5>
                         <canvas id="polar-area" class="chart chart-polar-area"
                                 chart-data="data" chart-labels="labels" chart-options="options">
                         </canvas>
@@ -122,9 +117,8 @@
 
             <div  class="grid-stack-item" data-gs-x="5" data-gs-y="25" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content"  ng-controller="doughnutCtrl">
-                    <div class="graph_container"  style="background: lightcyan; padding: 15px" >
-                      Doughnut chart
-                        <br />
+                    <div class="graph_container">
+                      <h5>Doughnut chart</h5>
                         <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
                         </canvas>
                     </div>
@@ -134,8 +128,7 @@
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="30" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="radarCtrl">
                     <div class="graph_container">
-                        Radar chart
-                        <br />
+                        <h5>Radar chart</h5>
                         <canvas id="radar" class="chart chart-radar"
                                 chart-data="data" chart-options="options" chart-labels="labels">
                         </canvas>
@@ -171,18 +164,15 @@
 
 <!-- Example AngularChart Controllers -->
 <script src="mods/js/grCtrl.js"></script>
-<script src="mods/js/chartSpots.js"></script>
-<script src="mods/js/chartLineBars.js"></script>
 <script src="mods/js/chartLines.js"></script>
 <script src="mods/js/chartBars.js"></script>
 <script src="mods/js/chartPies.js"></script>
-<script src="mods/js/chartBarsHorizontal.js"></script>
 <script src="mods/js/chartPolarArea.js"></script>
 <script src="mods/js/chartDougnut.js"></script>
 <script src="mods/js/chartRadar.js"></script>
-<script src="mods/js/chartDyna.js"></script>
-<script src="mods/js/chartDyna2.js"></script>
-<script src="mods/js/chartDyna3.js"></script>
+<script src="mods/js/chartLines.js"></script>
+<script src="mods/js/chartBarLines.js"></script>
+
 
 <script>$('#widget').draggable();</script>
 

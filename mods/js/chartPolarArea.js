@@ -9,7 +9,7 @@
  * */
 
 
-// Optional configuration
+// Define appChart controller function - polarCtrl
 appChart
     .controller("polarCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {

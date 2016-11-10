@@ -18,9 +18,9 @@
  other Angular modules to add to yours (here we are adding chart.js) this is simply to allow us to use an
  external angular module (3rd party created module) in our own app
  */
-var appChart = angular.module("appChart", ["chart.js"]);
+var appChart = angular.module("appChart", ["chart.js"]); //Define the angular module and give it a name = appChart
 
-// Optional configuration
+// Module configuration  - Notice that we now use the appChart name to extend the module and run the config function
 appChart.config(['ChartJsProvider', function (ChartJsProvider) {
 
     // Configure all charts - global configuration option for Chatjs angular module

@@ -9,7 +9,7 @@
  * */
 
 
-// Optional configuration
+// Create app appCharts controller function
 appChart
     .controller("pieCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {

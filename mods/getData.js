@@ -56,7 +56,6 @@ function getDataSet(call, $http) {
         })
         .success(function (datas) {
 
-            console.log(datas);
             sc = {
                 scopedata1: datas['series'][0],
                 scopedata2: datas['series'][1],

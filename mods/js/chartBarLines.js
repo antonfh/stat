@@ -119,7 +119,7 @@ update_data2 = function ($http) {
  used in this example
  */
 appChart
-    .controller("ChartDyna2",
+    .controller("ChartDynaBarLines",
         ['$scope', '$interval', '$http',
             function ($scope, $interval, $http) {
 

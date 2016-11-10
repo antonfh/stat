@@ -9,7 +9,7 @@
  * */
 
 
-// Optional configuration
+// appChart controller defined
 appChart
     .controller("doughnutCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
