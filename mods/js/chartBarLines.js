@@ -14,7 +14,6 @@
 var myChartDyna2,
     optionsDyna2,
     update_data2,
-    setLabels,
     Datasetclb2a,
     Datasetclb2b,
     Labelsclb2;
@@ -37,7 +36,7 @@ var myChartDyna2,
  options: optionsDyna2,
  data: {
 
- Notice the line "options" and there is assigned optionsDyna - thus the object below is then assigned to options later
+ Notice the line "options" and there is assigned optionsDyna2 - thus the object below is then assigned to options later
  */
 optionsDyna2 = {
     responsive: true,
@@ -79,13 +78,9 @@ update_data2 = function ($http) {
      This takes successfull data return from the getDataSet function and populates the Datasetclb2a and
      Datasetclb2b (you can call it something better) - which simply defined the 2 chartseries data items to sets
      */
-    getDataObj.then(function (datae) {
-
-        Datasetclb2a = datae.data.series[0];
-        Datasetclb2b = datae.data.series[1];
-        Labelsclb2 = datae.data.labels;
-
-    });
+    Datasetclb2a = getDataObj.series[0][0];
+    Datasetclb2b = getDataObj.series[1][0];
+    Labelsclb2 = getDataObj.labels[0];
 
     /*
      We create a data2 array object which we are then going to return to the calling instance, this will be used
@@ -110,12 +105,12 @@ update_data2 = function ($http) {
  Now we can extend or use that module definition and call the controller (controller is basically an Angular function
  use to do stuff on the page, in this case creating charts)
 
- We give our controller a name = here: ChartDyna2, you must use this name in your HTML page to tell the page what
+ We give our controller a name = here: ChartDynaBarLines, you must use this name in your HTML page to tell the page what
  controller (function) you are using on that section of the page, thus in the HTML (in index.html) you have:
 
- <div class="grid-stack-item-content" ng-controller="ChartDyna2">
+ <div class="grid-stack-item-content" ng-controller="ChartDynaBarLines">
 
- ng-controller tells the HTML page for that div element my controller is ChartDyna2, and the code below is what will be
+ ng-controller tells the HTML page for that div element my controller is ChartDynaBarLines, and the code below is what will be
  used in this example
  */
 appChart
@@ -138,7 +133,8 @@ appChart
 
                  Notice in datasets we have a bar and a line chart, thus you will have 2 chart items on the screen.
                  */
-                myChartDyna2 = new Chart(document.getElementById("baseXDyna2"), {
+                var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
+                chartSet = new Chart(document.getElementById("baseXDyna2"), {
                     type: 'bar',
                     options: optionsDyna2,
                     data: {
@@ -180,18 +176,17 @@ appChart
                     setSeries2a.shift();
                     setSeries2b.shift();
 
-                    setLabels2.push(dataset2['data2']['labels'][0]);
-                    setSeries2a.push(dataset2['data2']['data1'][0]);
-                    setSeries2b.push(dataset2['data2']['data2'][0]);
+                    setLabels2.push(dataset2['data2']['labels']);
+                    setSeries2a.push(dataset2['data2']['data1']);
+                    setSeries2b.push(dataset2['data2']['data2']);
 
-                    myChartDyna2.data.labels = setLabels2;
-                    myChartDyna2.data.datasets[0].data = setSeries2a;
-                    myChartDyna2.data.datasets[1].data = setSeries2b;
-                    myChartDyna2.update();
+                    chartSet.data.labels = setLabels2;
+                    chartSet.data.datasets[0].data = setSeries2a;
+                    chartSet.data.datasets[1].data = setSeries2b;
+                    chartSet.update();
                 }, 25000);
 
                 update_data2($http);
-
             }
         ]
     );

@@ -9,9 +9,9 @@
  * */
 
 /*
-    Set some global variables for the chart controller
+ Set some global variables for the chart controller
  */
-var myChartDyna,
+var myChartDynaBars,
     optionsDynaBars,
     update_data_bars,
     setLabelsBars,
@@ -20,7 +20,7 @@ var myChartDyna,
     LabelsclbBars;
 
 /*
-    ChartJs and the Angular module for ChartJS takes options, you can set a global options object here, refer to:
+ ChartJs and the Angular module for ChartJS takes options, you can set a global options object here, refer to:
 
  https://jtblin.github.io/angular-chart.js/
  http://www.chartjs.org/
@@ -52,47 +52,34 @@ optionsDynaBars = {
 };
 
 /*
-    This is a function you use in the controller below to get new chart data and update the chart
+ This is a function you use in the controller below to get new chart data and update the chart
 
-    The function "update_data",  calls another function "getData" (look at mods/getData,js) to get the chart data,
-    The data item structure should be some JSON - which would look like:
+ The function "update_data",  calls another function "getData" (look at mods/getData,js) to get the chart data,
+ The data item structure should be some JSON - which would look like:
 
-         {
-         "series":[-76],
-         "labels":["09:02:16"]
-         }
-     This will add one element to the chart, you have your labels and then your series which is your data to plot
+ {
+ "series":[-76],
+ "labels":["09:02:16"]
+ }
+ This will add one element to the chart, you have your labels and then your series which is your data to plot
  */
 (function () {
     update_data_bars = function ($http) {
 
         /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
-        getDataObjBars = getData('mainContentRandOneLineBars.php', $http);
+        getDataObjBars = getData('mainContentRandOneLineBars.php', $http, 'bars');
 
         /*
-            This simply takes the returned data object (getDataObj) and assigns the result (the series and labels data)
-            from the returned JSON string to the global variables Datasetclb and Labelsclb
+         This simply takes the returned data object (getDataObj) and assigns the result (the series and labels data)
+         from the returned JSON string to the global variables Datasetclb and Labelsclb
          */
-        getDataObjBars.then(function (datae) {
+        DatasetclbBars = getDataObjBars.series[0];
+        LabelsclbBars = getDataObjBars.labels[0];
 
-            DatasetclbBars = datae.data.series;
-            LabelsclbBars = datae.data.labels;
-
-        });
-
-        /* We define the data object, assigned the data labels and data fields. Notice you will use data then in the
-            controller - where you created the Chart object to assign it then to what data the chart will show
-
-         $interval(function () {
-         dataset = update_data($http);
-
-            This function in the controller calls this function and gets dataset, then uses variable dataset to assign
-            the Series and Label data
-         */
         data_bars = {
             data_bars: {
-                labels_bar: Labelsclb,
-                data_bar: Datasetclb
+                labels_bar: LabelsclbBars,
+                data_bar: DatasetclbBars
             },
         };
 
@@ -101,8 +88,8 @@ optionsDynaBars = {
 })();
 
 /*
-    Encapsulate appChart in function block, then define our appChart modules controller action function, the index.html
-    file points to the name of the controller here (ChartDynaBars) and uses the function to build the Chart
+ Encapsulate appChart in function block, then define our appChart modules controller action function, the index.html
+ file points to the name of the controller here (ChartDynaBars) and uses the function to build the Chart
  */
 (function () {
     appChart
@@ -111,59 +98,60 @@ optionsDynaBars = {
                 function ($scope, $interval, $http) {
 
                     /* This simply sets a base set of labels and series data to start of the graph - the $interval function
-                        below is what runs at set intervals and gets new chart data and updates the chart
+                     below is what runs at set intervals and gets new chart data and updates the chart
                      */
                     setLabelsBars = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                     setSeriesBars = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
                     /*
-                        This creates a new Chart object, we assign it to a name (here myChartDyna) - I would suggest each
-                        new chart object you create that you give it a distinct name - else you have some data conflicts
-                        as JS will build all the vars and object on the page - you need to have your vars and objects
-                        with unique names so the web page knows what is what
+                     This creates a new Chart object, we assign it to a name (here myChartDynaBars) - I would suggest each
+                     new chart object you create that you give it a distinct name - else you have some data conflicts
+                     as JS will build all the vars and object on the page - you need to have your vars and objects
+                     with unique names so the web page knows what is what
 
-                        Notice below we have the options and then data items, data is a set of fields again,
-                        where we define the labels (assigned setLabels) to it and then datasets->data (assigned setSeries to it)
+                     Notice below we have the options and then data items, data is a set of fields again,
+                     where we define the labels (assigned setLabels) to it and then datasets->data (assigned setSeries to it)
                      */
-                    myChartDynaBars = new Chart(document.getElementById("ChartDynaBars"), {
-                        type: 'bar',
-                        options: optionsDynaBars,
-                        data: {
+                    var chartSet = myChartDynaBars; //When you copy this controller - just give the charSet a new name
+                    chartSet = new Chart(document.getElementById("ChartDynaBars"), {
+                        type: 'bar', //What chart to create
+                        options: optionsDynaBars, //Add in any Global options for the chart
+                        data: { //Your data object, consisting of labels to put on the chart and the datasets
                             labels: setLabelsBars,
                             datasets: [{
                                 fill: true,
-                                data: setSeriesBars
+                                data: setSeriesBars //Your datasets - data is the totals to plot on chart
                             }]
                         }
                     });
 
 
                     /*
-                        To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
-                        function, the function simply takes call function and then the interval time (here 75000)
+                     To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
+                     function, the function simply takes call function and then the interval time (here 75000)
 
-                        The function itself first gets the data (assigned dataset) - then uses standard shift and push
-                        methods on the setLabels and setSeries global objects. In the push method we then add the data to the
-                        object.
+                     The function itself first gets the data (assigned dataset) - then uses standard shift and push
+                     methods on the setLabels and setSeries global objects. In the push method we then add the data to the
+                     object.
 
-                        dataset is the data returned from calling update_data and the format is:
+                     datasetBars is the data returned from calling update_data and the format is:
 
-                        dataset['data']['labels'] and ['data']
+                     datasetBars['data_bars']['labels_bar'] and datasetBars['data_bars']['data_bar']
                      */
                     $interval(function () {
                         datasetBars = update_data_bars($http);
 
                         setLabelsBars.shift();
                         setSeriesBars.shift();
-                        setLabelsBars.push(datasetBars['data_bars']['labels_bar'][0]);
-                        setSeriesBars.push(datasetBars['data_bars']['data_bar'][0]);
+                        setLabelsBars.push(datasetBars['data_bars']['labels_bar']);
+                        setSeriesBars.push(datasetBars['data_bars']['data_bar']);
 
-                        /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
-                        myChartDynaBars.data.labels = setLabelsBars;
+                        /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
+                        chartSet.data.labels = setLabelsBars;
 
-                        /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
-                        myChartDynaBars.data.datasets[0].data = setSeriesBars;
-                        myChartDynaBars.update();
+                        /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
+                        chartSet.data.datasets[0].data = setSeriesBars;
+                        chartSet.update();
                     }, 15000); //This is the interval time this function will be run (milliseconds)
 
                     update_data($http);
