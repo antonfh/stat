@@ -159,3 +159,4 @@ themes/classic/views/
 /.tgitconfig
 .gitignore
 .idea
+.idea/
