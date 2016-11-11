@@ -158,3 +158,4 @@ themes/classic/views/
 # Project-level settings
 /.tgitconfig
 .gitignore
+.idea
