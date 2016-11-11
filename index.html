@@ -31,9 +31,10 @@
         <div class="grid-stack" >
 
 
+            <!-- ROW 1 -->
 
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
-            <div id="widget" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+            <div id="widget" class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
                         ChartDyna, look at /mods/js/chartLines.js
@@ -64,8 +65,28 @@
 
 
 
+
+
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
-            <div id="f" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+            <div id="xf94f444t" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+
+                <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
+                        ChartDyna, look at /mods/js/chartLines.js
+                        -->
+                <div class="grid-stack-item-content" ng-controller="ChartDynaLine2">
+                    <div class="graph_container" >
+                        <h5>Dynamic updating Line chart 2</h5>
+
+                        <canvas id="baseXDyna22"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+           <!-- ROW 2 -->
+
+            <!-- This is another grid block item. Notice data-gs-x and y is different -->
+            <div id="f" class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
                         ChartDyna, look at /mods/js/chartLines.js
@@ -79,7 +100,7 @@
             </div>
 
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
-            <div id="fs" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+            <div id="fs" class="grid-stack-item" data-gs-x="5" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
                         ChartDynaBars, look at /mods/js/chartLines.js
@@ -92,7 +113,9 @@
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="20" data-gs-width="5" data-gs-height="3">
+
+           <!-- ROW 3 -->
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="pieCtrl">
                     <div class="graph_container"  >
                         <h5>Pie chart</h5>
@@ -104,7 +127,7 @@
             </div>
 
 
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="25" data-gs-width="5" data-gs-height="3">
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="polarCtrl">
                     <div class="graph_container">
                         <h5>Polar chart</h5>
@@ -115,7 +138,10 @@
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="25" data-gs-width="5" data-gs-height="3">
+
+            <!-- ROW 4 -->
+
+            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content"  ng-controller="doughnutCtrl">
                     <div class="graph_container">
                       <h5>Doughnut chart</h5>
@@ -125,7 +151,7 @@
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="30" data-gs-width="5" data-gs-height="3">
+            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="15" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="radarCtrl">
                     <div class="graph_container">
                         <h5>Radar chart</h5>

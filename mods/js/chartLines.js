@@ -12,13 +12,7 @@
  Set some global variables for the chart controller
  */
 var myChartDyna,
-    optionsDyna,
-    update_data,
-    setLabels,
-    setSeries,
-    Datasetclb,
-    Labelsclb;
-
+    optionsDyna;
 /*
  ChartJs and the Angular module for ChartJS takes options, you can set a global options object here, refer to:
 
@@ -51,36 +45,6 @@ optionsDyna = {
     }
 };
 
-/*
- This is a function you use in the controller below to get new chart data and update the chart
-
- The function "update_data",  calls another function "getData" (look at mods/getData,js) to get the chart data,
- The data item structure should be some JSON - which would look like:
-
- {
- "series":[-76],
- "labels":["09:02:16"]
- }
- This will add one element to the chart, you have your labels and then your series which is your data to plot
- */
-update_data = function ($http) {
-
-    /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
-    getDataObjLine = getData('mainContentRandOneLine.php', $http, 'lines');
-
-    Datasetclb = getDataObjLine.series[0];
-    Labelsclb = getDataObjLine.labels[0];
-
-    data = {
-        data_lines: {
-            labels: Labelsclb,
-            data: Datasetclb
-        },
-    };
-
-    return data;
-};
-
 
 /*
  Encapsulate appChart in function block, then define our appChart modules controller action function, the index.html
@@ -92,11 +56,15 @@ update_data = function ($http) {
             ['$scope', '$interval', '$http',
                 function ($scope, $interval, $http) {
 
+                    var ctrlName = 'ChartDynaLine';
                     /* This simply sets a base set of labels and series data to start of the graph - the $interval function
                      below is what runs at set intervals and gets new chart data and updates the chart
                      */
-                    setLabels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-                    setSeries = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    var setLabels = [];
+                    var setSeries = [];
+
+                    setLabels[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    setSeries[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
                     /*
                      This creates a new Chart object, we assign it to a name (here myChartDyna) - I would suggest each
@@ -112,10 +80,10 @@ update_data = function ($http) {
                         type: 'line', //What chart to create
                         options: optionsDyna, //Add in any Global options for the chart
                         data: { //Your data object, consisting of labels to put on the chart and the datasets
-                            labels: setLabels,
+                            labels: setLabels[ctrlName],
                             datasets: [{
                                 fill: true,
-                                data: setSeries //Your datasets - data is the totals to plot on chart
+                                data: setSeries[ctrlName] //Your datasets - data is the totals to plot on chart
                             }]
                         }
                     });
@@ -131,26 +99,82 @@ update_data = function ($http) {
 
                      dataset is the data returned from calling update_data and the format is:
 
-                     dataset['data_lines']['labels'] and dataset['data_lines']['data']
+                     dataset['data']['labels'] and dataset['data']['data']
                      */
                     $interval(function () {
-                        dataset = update_data($http);
+                        dataset = update_data($http, ctrlName);
 
-                        setLabels.shift();
-                        setSeries.shift();
-                        setLabels.push(dataset['data_lines']['labels']);
-                        setSeries.push(dataset['data_lines']['data']);
+                        setLabels[ctrlName].shift();
+                        setSeries[ctrlName].shift();
+                        setLabels[ctrlName].push(dataset[ctrlName]['data']['labels']);
+                        setSeries[ctrlName].push(dataset[ctrlName]['data']['data']);
 
                         /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
-                        chartSet.data.labels = setLabels;
+                        chartSet.data.labels = setLabels[ctrlName];
 
                         /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
-                        chartSet.data.datasets[0].data = setSeries;
+                        chartSet.data.datasets[0].data = setSeries[ctrlName];
                         chartSet.update();
 
                     }, 14000); //This is the interval time this function will be run (milliseconds)
 
-                    update_data($http);
+                    update_data($http, ctrlName);
+                }
+            ]
+        );
+})();
+
+/*
+    Second graph controller example with less comments - basically a copy of the above only change the
+    getElementById to baseXDyna22 (which is the id for the div block in the index.html)
+ */
+(function () {
+    appChart
+        .controller("ChartDynaLine2",
+            ['$scope', '$interval', '$http',
+                function ($scope, $interval, $http) {
+
+                    var ctrlName = 'ChartDynaLine2';
+
+                    var setLabels = [];
+                    var setSeries = [];
+
+                    setLabels[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    setSeries[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+                    var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
+                    chartSet = new Chart(document.getElementById("baseXDyna22"), {
+                        type: 'line', //What chart to create
+                        options: optionsDyna, //Add in any Global options for the chart
+                        data: { //Your data object, consisting of labels to put on the chart and the datasets
+                            labels: setLabels[ctrlName],
+                            datasets: [{
+                                fill: true,
+                                data: setSeries[ctrlName] //Your datasets - data is the totals to plot on chart
+                            }]
+                        }
+                    });
+
+
+                    $interval(function () {
+
+                        dataset = update_data($http, ctrlName);
+console.log(dataset);
+                        setLabels[ctrlName].shift();
+                        setSeries[ctrlName].shift();
+                        setLabels[ctrlName].push(dataset[ctrlName]['data']['labels']);
+                        setSeries[ctrlName].push(dataset[ctrlName]['data']['data']);
+console.log(setSeries[ctrlName]);
+                        /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
+                        chartSet.data.labels = setLabels[ctrlName];
+
+                        /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
+                        chartSet.data.datasets[0].data = setSeries[ctrlName];
+                        chartSet.update();
+
+                    }, 25000); //This is the interval time this function will be run (milliseconds)
+
+                    update_data($http, ctrlName);
                 }
             ]
         );

@@ -2,6 +2,92 @@
  * Created by Anton on 2016-11-03.
  */
 
+/*
+ This is a function you use in the controller below to get new chart data and update the chart
+
+ The function "update_data",  calls another function "getData" (look at mods/getData,js) to get the chart data,
+ The data item structure should be some JSON - which would look like:
+
+ {
+ "series":[-76],
+ "labels":["09:02:16"]
+ }
+ This will add one element to the chart, you have your labels and then your series which is your data to plot
+ */
+update_data = function ($http, unid) {
+
+    var data = [];
+
+    /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
+    getDataObjLine = getData('mainContentRandOneLine.php', $http, 'lines');
+    var seriesData;// = Datasetclb + unid;
+    var seriesLabels;// = Labelsclb + unid;
+    seriesData = getDataObjLine.series[0];
+    seriesLabels = getDataObjLine.labels[0];
+
+    data[unid] = {
+        data: {
+            labels: seriesLabels,
+            data: seriesData
+        },
+    };
+
+    return data;
+};
+
+
+/* For series data with 2 series elements - call update_data_series*/
+
+/*
+ This is a function you use in the controller below to get new chart data and update the chart
+
+ The function "update_data",  calls another function "getDataSet" (look at mods/getData.js) to get the chart data,
+ The data item structure should be some JSON - which would look like:
+
+ {
+ "series":[[-44],[63]],
+ "labels":["11:25"]
+ }
+
+ Remember here you are plotting 2 series to the chart - therefor you have an array [[-44],[63]], we are updating one record
+ one plot on the chart at a time with 2 values
+ */
+update_data_series = function ($http, unid) {
+
+    var datas = [];
+    /*
+     This calls the getDataSet method (you pass in the function that is going to return your values - this must
+     be an external service that will return the correct format JSON (as explained in function comments above
+     */
+    getDataObj = getDataSet('mainContentRantestd.php', $http);
+
+    /*
+     This takes successfull data return from the getDataSet function and populates the Datasetclb2a and
+     Datasetclb2b (you can call it something better) - which simply defined the 2 chartseries data items to sets
+     */
+    var seriesDataS1 = Datasetclb2a + unid;
+    var seriesDataS2 = Datasetclb2b + unid;
+    var labelsDataS = Labelsclb2 + unid;
+
+    seriesDataS1 = getDataObj.series[0][0];
+    seriesDataS2 = getDataObj.series[1][0];
+    labelsDataS = getDataObj.labels[0];
+
+    /*
+     We create a data2 array object which we are then going to return to the calling instance, this will be used
+     in side the main function below
+     */
+    datas[unid] = {
+        data: {
+            labels: labelsDataS,
+            data1: seriesDataS1,
+            data2: seriesDataS2,
+        },
+    };
+
+    return datas;
+}
+
 
 /*
  Function which gets the data from the external service - in JSON, which is used by Charts.

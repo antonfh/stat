@@ -52,50 +52,7 @@ optionsDyna2 = {
     }
 };
 
-/*
- This is a function you use in the controller below to get new chart data and update the chart
-
- The function "update_data",  calls another function "getDataSet" (look at mods/getData.js) to get the chart data,
- The data item structure should be some JSON - which would look like:
-
- {
- "series":[[-44],[63]],
- "labels":["11:25"]
- }
-
- Remember here you are plotting 2 series to the chart - therefor you have an array [[-44],[63]], we are updating one record
- one plot on the chart at a time with 2 values
- */
-update_data2 = function ($http) {
-
-    /*
-     This calls the getDataSet method (you pass in the function that is going to return your values - this must
-     be an external service that will return the correct format JSON (as explained in function comments above
-     */
-    getDataObj = getDataSet('mainContentRantestd.php', $http);
-
-    /*
-     This takes successfull data return from the getDataSet function and populates the Datasetclb2a and
-     Datasetclb2b (you can call it something better) - which simply defined the 2 chartseries data items to sets
-     */
-    Datasetclb2a = getDataObj.series[0][0];
-    Datasetclb2b = getDataObj.series[1][0];
-    Labelsclb2 = getDataObj.labels[0];
-
-    /*
-     We create a data2 array object which we are then going to return to the calling instance, this will be used
-     in side the main function below
-     */
-    data2 = {
-        data2: {
-            labels: Labelsclb2,
-            data1: Datasetclb2a,
-            data2: Datasetclb2b,
-        },
-    };
-
-    return data2;
-};
+;
 
 
 /*
@@ -169,16 +126,18 @@ appChart
                  dataset['data2']['labels'] and
                  dataset2['data2']['data1'][0] and dataset2['data2']['data2'][0]
                  */
+                var ctrlName = 'ChartDynaBarLines';
                 $interval(function () {
-                    dataset2 = update_data2($http);
+
+                    dataset2 = update_data_series($http, ctrlName);
 
                     setLabels2.shift();
                     setSeries2a.shift();
                     setSeries2b.shift();
 
-                    setLabels2.push(dataset2['data2']['labels']);
-                    setSeries2a.push(dataset2['data2']['data1']);
-                    setSeries2b.push(dataset2['data2']['data2']);
+                    setLabels2.push(dataset2[ctrlName]['data']['labels']);
+                    setSeries2a.push(dataset2[ctrlName]['data']['data1']);
+                    setSeries2b.push(dataset2[ctrlName]['data']['data2']);
 
                     chartSet.data.labels = setLabels2;
                     chartSet.data.datasets[0].data = setSeries2a;
@@ -186,7 +145,7 @@ appChart
                     chartSet.update();
                 }, 25000);
 
-                update_data2($http);
+                update_data_series($http, ctrlName);
             }
         ]
     );
