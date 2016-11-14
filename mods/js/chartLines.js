@@ -101,8 +101,9 @@ optionsDyna = {
 
                      dataset['data']['labels'] and dataset['data']['data']
                      */
+                    var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
-                        dataset = update_data($http, ctrlName);
+                        dataset = update_data($http, ctrlName, endPoint);
 
                         setLabels[ctrlName].shift();
                         setSeries[ctrlName].shift();
@@ -118,7 +119,7 @@ optionsDyna = {
 
                     }, 14000); //This is the interval time this function will be run (milliseconds)
 
-                    update_data($http, ctrlName);
+                    update_data($http, ctrlName, endPoint);
                 }
             ]
         );
@@ -155,16 +156,16 @@ optionsDyna = {
                         }
                     });
 
-
+                    var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
 
-                        dataset = update_data($http, ctrlName);
-console.log(dataset);
+                        dataset = update_data($http, ctrlName, endPoint);
+
                         setLabels[ctrlName].shift();
                         setSeries[ctrlName].shift();
                         setLabels[ctrlName].push(dataset[ctrlName]['data']['labels']);
                         setSeries[ctrlName].push(dataset[ctrlName]['data']['data']);
-console.log(setSeries[ctrlName]);
+
                         /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
                         chartSet.data.labels = setLabels[ctrlName];
 
@@ -172,9 +173,9 @@ console.log(setSeries[ctrlName]);
                         chartSet.data.datasets[0].data = setSeries[ctrlName];
                         chartSet.update();
 
-                    }, 25000); //This is the interval time this function will be run (milliseconds)
+                    }, 25001); //This is the interval time this function will be run (milliseconds)
 
-                    update_data($http, ctrlName);
+                    update_data($http, ctrlName, endPoint);
                 }
             ]
         );

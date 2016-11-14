@@ -14,12 +14,16 @@
  }
  This will add one element to the chart, you have your labels and then your series which is your data to plot
  */
-update_data = function ($http, unid) {
+update_data = function ($http, unid, endPointFile) {
 
     var data = [];
 
     /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
-    getDataObjLine = getData('mainContentRandOneLine.php', $http, 'lines');
+    var randomtime = (Math.random() * (100 - 10 + 1) ) << 0;
+    window.setTimeout(function () {
+    }, randomtime);
+
+    getDataObjLine = getData(endPointFile, $http, 'lines');
     var seriesData;// = Datasetclb + unid;
     var seriesLabels;// = Labelsclb + unid;
     seriesData = getDataObjLine.series[0];
@@ -52,14 +56,14 @@ update_data = function ($http, unid) {
  Remember here you are plotting 2 series to the chart - therefor you have an array [[-44],[63]], we are updating one record
  one plot on the chart at a time with 2 values
  */
-update_data_series = function ($http, unid) {
+update_data_series = function ($http, unid, endPointFile) {
 
     var datas = [];
     /*
      This calls the getDataSet method (you pass in the function that is going to return your values - this must
      be an external service that will return the correct format JSON (as explained in function comments above
      */
-    getDataObj = getDataSet('mainContentRantestd.php', $http);
+    getDataObj = getDataSet(endPointFile, $http);
 
     /*
      This takes successfull data return from the getDataSet function and populates the Datasetclb2a and
@@ -139,7 +143,6 @@ function getData(call, $http) {
         series = datae['data']['series'];
 
         returnData = {'labels': labels, 'series': series};
-
     });
 
     return returnData;

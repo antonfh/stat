@@ -103,10 +103,11 @@ optionsDynaBars = {
                      datasetBars['data']['labels'] and datasetBars['data']['data']
                      */
 
+                    var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
 
-                        datasetBars = update_data($http, ctrlName);
-                        console.log(datasetBars);
+                        datasetBars = update_data($http, ctrlName, endPoint);
+
                         setLabels.shift();
                         setSeries.shift();
                         setLabels.push(datasetBars[ctrlName]['data']['labels']);
@@ -118,9 +119,9 @@ optionsDynaBars = {
                         /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
                         chartSet.data.datasets[0].data = setSeries;
                         chartSet.update();
-                    }, 25000); //This is the interval time this function will be run (milliseconds)
+                    }, 24000); //This is the interval time this function will be run (milliseconds)
 
-                    update_data($http, ctrlName);
+                    update_data($http, ctrlName, endPoint);
                 }
             ]
         );

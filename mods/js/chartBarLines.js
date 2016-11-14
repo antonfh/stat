@@ -129,7 +129,7 @@ appChart
                 var ctrlName = 'ChartDynaBarLines';
                 $interval(function () {
 
-                    dataset2 = update_data_series($http, ctrlName);
+                    dataset2 = update_data_series($http, ctrlName, 'mainContentRantestd.php');
 
                     setLabels2.shift();
                     setSeries2a.shift();
@@ -145,7 +145,7 @@ appChart
                     chartSet.update();
                 }, 25000);
 
-                update_data_series($http, ctrlName);
+                update_data_series($http, ctrlName, 'mainContentRantestd.php');
             }
         ]
     );
