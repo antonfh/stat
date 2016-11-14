@@ -9,7 +9,8 @@
  * */
 
 /*
- You create an app variable - which all controllers later in your javascript files will used to define their
+ You create an app variable (called appChart here) and defined it as a angular Module (angular.module() )
+  - which all controllers later in your javascript files will used to define their
  .controllers methods from - review the other mods/js (chartDyna.js for example
 
  Look at: https://docs.angularjs.org/tutorial
@@ -19,7 +20,9 @@
  external angular module (3rd party created module) in our own app
  */
 var appChart = angular.module("appChart", ["chart.js"]); //Define the angular module and give it a name = appChart
-var callURI = 'http://psapi.anton.co.za/';
+var callURI = 'http://psapi.anton.co.za/'; //Change this to your server which will return JSON data
+
+
 // Module configuration  - Notice that we now use the appChart name to extend the module and run the config function
 appChart.config(['ChartJsProvider', function (ChartJsProvider) {
 

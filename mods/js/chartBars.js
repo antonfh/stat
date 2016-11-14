@@ -48,7 +48,7 @@ optionsDynaBars = {
 
 
 /*
- Encapsulate appChart in function block, then define our appChart modules controller action function, the index.html
+ Encapsulate "appChart" in function block, then define our appChart modules controller action function, the index.html
  file points to the name of the controller here (ChartDynaBars) and uses the function to build the Chart
  */
 (function () {
@@ -92,15 +92,16 @@ optionsDynaBars = {
 
                     /*
                      To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
-                     function, the function simply takes call function and then the interval time (here 75000)
+                     function, the function simply takes call function and then the interval time (here 24000)
 
-                     The function itself first gets the data (assigned dataset) - then uses standard shift and push
+                     The function itself first gets the data (assigned datasetBars) - then uses standard shift and push
                      methods on the setLabels and setSeries global objects. In the push method we then add the data to the
                      object.
 
                      datasetBars is the data returned from calling update_data and the format is:
 
-                     datasetBars['data']['labels'] and datasetBars['data']['data']
+                     datasetBars[ctrlName]['data']['labels'] and
+                     datasetBars[ctrlName]['data']['data']
                      */
 
                     var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
@@ -121,7 +122,7 @@ optionsDynaBars = {
                         chartSet.update();
                     }, 24000); //This is the interval time this function will be run (milliseconds)
 
-                    update_data($http, ctrlName, endPoint);
+                    update_data($http, ctrlName, endPoint); //Calls the update_data_series method to update data
                 }
             ]
         );

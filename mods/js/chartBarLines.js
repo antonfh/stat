@@ -13,7 +13,6 @@
  */
 var myChartDyna2,
     optionsDyna2,
-    update_data2,
     Datasetclb2a,
     Datasetclb2b,
     Labelsclb2;
@@ -52,24 +51,23 @@ optionsDyna2 = {
     }
 };
 
-;
-
 
 /*
  Our app was defined in mods/js/grCtrl.js, the line in that file : var appChart = angular.module("appChart", ["chart.js"]);
- created the angular app - assigned to appChart.
+ created the angular app - assigned to "appChart".
 
  Now we can extend or use that module definition and call the controller (controller is basically an Angular function
  use to do stuff on the page, in this case creating charts)
 
- We give our controller a name = here: ChartDynaBarLines, you must use this name in your HTML page to tell the page what
+ We give our controller a name = here: "ChartDynaBarLines", you must use this name in your HTML page to tell the page what
  controller (function) you are using on that section of the page, thus in the HTML (in index.html) you have:
 
  <div class="grid-stack-item-content" ng-controller="ChartDynaBarLines">
 
- ng-controller tells the HTML page for that div element my controller is ChartDynaBarLines, and the code below is what will be
+ ng-controller tells the HTML page for that div element my controller is "ChartDynaBarLines", and the code below is what will be
  used in this example
  */
+(function () {
 appChart
     .controller("ChartDynaBarLines",
         ['$scope', '$interval', '$http',
@@ -88,7 +86,8 @@ appChart
 
                  See document : http://www.chartjs.org/docs/#chart-configuration-mixed-chart-types
 
-                 Notice in datasets we have a bar and a line chart, thus you will have 2 chart items on the screen.
+                 Notice in datasets inside of data field, we have a bar and a line chart, thus you will have
+                 2 chart items on the screen.
                  */
                 var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
                 chartSet = new Chart(document.getElementById("baseXDyna2"), {
@@ -110,26 +109,28 @@ appChart
                             }
                         ]
                     }
-                })
+                });
 
 
                 /*
                  To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
-                 function, the function simply takes call function and then the interval time (here 75000)
+                 function, the function simply takes call function and then the interval time (here 25000)
 
-                 The function itself first gets the data (assigned dataset) - then uses standard shift and push
+                 The function itself first gets the data (assigned dataset2) - then uses standard shift and push
                  methods on the setLabels and setSeries global objects. In the push method we then add the data to the
                  object.
 
-                 dataset is the data returned from calling update_data and the format is:
+                 dataset2 is the data returned from calling update_data and the format is:
 
-                 dataset['data2']['labels'] and
-                 dataset2['data2']['data1'][0] and dataset2['data2']['data2'][0]
+                 dataset2[ctrlName]['data']['labels'] and
+                 dataset2[ctrlName]['data']['data1'] and
+                 dataset2[ctrlName]['data']['data2']
                  */
                 var ctrlName = 'ChartDynaBarLines';
+                var endPoint = 'mainContentRantestd.php'; // Name of endpoint Script name on other side
                 $interval(function () {
 
-                    dataset2 = update_data_series($http, ctrlName, 'mainContentRantestd.php');
+                    dataset2 = update_data_series($http, ctrlName, endPoint);
 
                     setLabels2.shift();
                     setSeries2a.shift();
@@ -145,7 +146,8 @@ appChart
                     chartSet.update();
                 }, 25000);
 
-                update_data_series($http, ctrlName, 'mainContentRantestd.php');
+                update_data_series($http, ctrlName, endPoint); //Calls the update_data_series method to update data
             }
         ]
     );
+})();

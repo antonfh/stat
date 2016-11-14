@@ -23,11 +23,10 @@ update_data = function ($http, unid, endPointFile) {
     window.setTimeout(function () {
     }, randomtime);
 
-    getDataObjLine = getData(endPointFile, $http, 'lines');
-    var seriesData;// = Datasetclb + unid;
-    var seriesLabels;// = Labelsclb + unid;
-    seriesData = getDataObjLine.series[0];
-    seriesLabels = getDataObjLine.labels[0];
+    getDataObjLine = getData(endPointFile, $http);
+
+    var seriesData = getDataObjLine.series[0];
+    var seriesLabels = getDataObjLine.labels[0];
 
     data[unid] = {
         data: {
@@ -49,8 +48,11 @@ update_data = function ($http, unid, endPointFile) {
  The data item structure should be some JSON - which would look like:
 
  {
- "series":[[-44],[63]],
- "labels":["11:25"]
+    "series":[
+        [-44],
+        [63]
+    ],
+    "labels":["11:25"]
  }
 
  Remember here you are plotting 2 series to the chart - therefor you have an array [[-44],[63]], we are updating one record
@@ -59,6 +61,11 @@ update_data = function ($http, unid, endPointFile) {
 update_data_series = function ($http, unid, endPointFile) {
 
     var datas = [];
+
+    /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
+    var randomtime = (Math.random() * (100 - 10 + 1) ) << 0;
+    window.setTimeout(function () {
+    }, randomtime);
     /*
      This calls the getDataSet method (you pass in the function that is going to return your values - this must
      be an external service that will return the correct format JSON (as explained in function comments above
@@ -69,13 +76,9 @@ update_data_series = function ($http, unid, endPointFile) {
      This takes successfull data return from the getDataSet function and populates the Datasetclb2a and
      Datasetclb2b (you can call it something better) - which simply defined the 2 chartseries data items to sets
      */
-    var seriesDataS1 = Datasetclb2a + unid;
-    var seriesDataS2 = Datasetclb2b + unid;
-    var labelsDataS = Labelsclb2 + unid;
-
-    seriesDataS1 = getDataObj.series[0][0];
-    seriesDataS2 = getDataObj.series[1][0];
-    labelsDataS = getDataObj.labels[0];
+    var seriesDataS1 = getDataObj.series[0][0];
+    var seriesDataS2 = getDataObj.series[1][0];
+    var labelsDataS = getDataObj.labels[0];
 
     /*
      We create a data2 array object which we are then going to return to the calling instance, this will be used
