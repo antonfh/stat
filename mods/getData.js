@@ -38,6 +38,36 @@ update_data = function ($http, unid, endPointFile) {
     return data;
 };
 
+update_data_pie = function ($http, unid, endPointFile) {
+
+    var datap = [];
+
+    /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
+    var randomtime = (Math.random() * (100 - 10 + 1) ) << 0;
+    window.setTimeout(function () {
+    }, randomtime);
+
+    var getDataObjLinePie = [];
+
+    getDataObjLinePie = getDataPie(endPointFile, $http);
+
+    var seriesDatap = [];
+    seriesDatap = getDataObjLinePie.series;
+    var seriesLabelsp = [];
+    seriesLabelsp = getDataObjLinePie.labels;
+
+    datap[unid] = {
+        data: {
+            labels: seriesLabelsp,
+            data: seriesDatap
+        },
+    };
+
+    console.log('data_pie');
+    console.log(getDataObjLinePie);
+    return datap;
+};
+
 
 /* For series data with 2 series elements - call update_data_series*/
 
@@ -121,8 +151,8 @@ update_data_series = function ($http, unid, endPointFile) {
 var returnData = {'labels': 0, 'series': 0};
 function getData(call, $http) {
 
-    var labels = 0;
-    var series = 0;
+    var labels = [];
+    var series = [];
 
     $httpData = $http(
         {
@@ -147,7 +177,41 @@ function getData(call, $http) {
 
         returnData = {'labels': labels, 'series': series};
     });
+    return returnData;
+};
 
+function getDataPie(call, $http) {
+
+    var labels = [];
+    var series = [];
+
+    $httpData = $http(
+        {
+            method: 'GET',
+            url: callURI + call + ''
+        })
+        .success(function (datas) {
+
+            sc = {
+                scopedata: datas['series'],
+                scopelabels: datas['labels']
+            };
+        })
+        .error(function (datas, status) {
+            console.log('Data error' + status + ' Data- '.datas)
+        });
+
+    $httpData.then(function (datae) {
+        console.log('tettet');
+        console.log(datae['data']['series']);
+        labels = datae['data']['labels'];
+        series = datae['data']['series'];
+        console.log('series');
+        console.log(series);
+        returnData = {'labels': labels, 'series': series};
+    });
+    console.log('returnData');
+    console.log(returnData);
     return returnData;
 };
 

@@ -16,7 +16,8 @@ optionsDynaPie = {
             borderWidth: 1,
             borderColor: 'rgb(0, 0, 0)'
         }
-    }
+    },
+
 };
 
 // Create app appCharts controller function
@@ -77,21 +78,19 @@ appChart
             var endPoint = 'mainContentRandPieData.php'; // Name of endpoint Script name on other side
             $interval(function () {
 
-                datasetBars = update_data($http, ctrlName, endPoint);
-
-                setLabels.shift();
-                setSeries.shift();
-                setLabels = datasetBars[ctrlName]['data']['labels'];
-                setSeries = datasetBars[ctrlName]['data']['data'];
+                datasetPies = update_data_pie($http, ctrlName, endPoint);
+console.log(datasetPies);
+                setLabels = datasetPies[ctrlName]['data']['labels'];
+                setSeries = datasetPies[ctrlName]['data']['data'];
 
                 /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
                 chartSet.data.labels = setLabels;
 
                 /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
-                chartSet.data.datasets[0].data = setSeries;
-                chartSet.update();
+                chartSet.data.datasets.data = setSeries;
+                //chartSet.update();
             }, 24000); //This is the interval time this function will be run (milliseconds)
 
-            update_data($http, ctrlName, endPoint); //Calls the update_data_series method to update data
+            update_data_pie($http, ctrlName, endPoint); //Calls the update_data_series method to update data
         }
         ]);
