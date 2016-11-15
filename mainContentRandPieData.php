@@ -1,9 +1,9 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 date_default_timezone_set('Africa/Johannesburg');
-$rnd1 = rand(-100, 100);
-$rnd2 = rand(-100, 100);
-$rnd3 = rand(-100, 100);
+$rnd1 = rand(0, 25);
+$rnd2 = rand(26, 75);
+$rnd3 = rand(75, 100);
 
 $arr = null;
 
