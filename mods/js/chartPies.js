@@ -48,7 +48,7 @@ appChart
              Notice below we have the options and then data items, data is a set of fields again,
              where we define the labels (assigned setLabels) to it and then datasets->data (assigned setSeries to it)
              */
-            var chartSet = myChartDynaPie; //When you copy this controller - just give the charSet a new name
+            chartSet = myChartDynaPie; //When you copy this controller - just give the charSet a new name
             chartSet = new Chart(document.getElementById("baseXPie"), {
                 type: 'pie', //What chart to create
                 options: optionsDynaPie, //Add in any Global options for the chart
@@ -74,23 +74,25 @@ appChart
              datasetBars[ctrlName]['data']['labels'] and
              datasetBars[ctrlName]['data']['data']
              */
-
             var endPoint = 'mainContentRandPieData.php'; // Name of endpoint Script name on other side
             $interval(function () {
 
-                datasetPies = update_data_pie($http, ctrlName, endPoint);
+                datasetPies = update_data($http, ctrlName, endPoint);
 console.log(datasetPies);
-                setLabels = datasetPies[ctrlName]['data']['labels'];
-                setSeries = datasetPies[ctrlName]['data']['data'];
+                if (typeof datasetPies != 'undefined') {
+                    setLabels = datasetPies[ctrlName]['data']['labels'];
+                    setSeries = datasetPies[ctrlName]['data']['data'];
 
-                /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
-                chartSet.data.labels = setLabels;
+                    /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
+                    chartSet.data.labels = setLabels;
 
-                /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
-                chartSet.data.datasets.data = setSeries;
+                    /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
+                    chartSet.data.datasets.data = setSeries;
+                    //chartSet.update();
+                }
                 //chartSet.update();
             }, 24000); //This is the interval time this function will be run (milliseconds)
 
-            update_data_pie($http, ctrlName, endPoint); //Calls the update_data_series method to update data
+            update_data($http, ctrlName, endPoint); //Calls the update_data_series method to update data
         }
         ]);

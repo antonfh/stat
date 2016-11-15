@@ -14,26 +14,68 @@
  }
  This will add one element to the chart, you have your labels and then your series which is your data to plot
  */
-update_data = function ($http, unid, endPointFile) {
+var seriesData = [];
+var labelsData = [];
+var dataSeries = [];
+var dataLabels = [];
 
-    var data = [];
+function setSeries(dataSeries, unid){
+    if (typeof dataSeries != 'undefined') {
+        this.dataSeries[unid] = dataSeries;
+    }
+}
+
+function getSeries(unid) {
+    if (typeof this.dataSeries[unid] != 'undefined') {
+        return this.dataSeries[unid];
+    }
+
+    return null;
+}
+
+function setLabels(dataLabels, unid){
+    if (typeof dataSeries != 'undefined') {
+        this.dataLabels[unid] = dataLabels;
+    }
+}
+
+function getLabels(unid) {
+
+    if (typeof this.dataLabels[unid] != 'undefined') {
+        return this.dataLabels[unid];
+    }
+
+    return null;
+}
+
+update_data = function ($http, unid, endPointFile) {
 
     /* Gets the data object - JSON, returning series and labels, as explained in comment above*/
     var randomtime = (Math.random() * (100 - 10 + 1) ) << 0;
     window.setTimeout(function () {
     }, randomtime);
 
-    getDataObjLine = getData(endPointFile, $http);
+    var getDataObjLine = [];
+    getDataObjLine[unid] = null;
+    var result = null;
+    result = getData(endPointFile, $http, unid);
 
-    var seriesData = getDataObjLine.series[0];
-    var seriesLabels = getDataObjLine.labels[0];
+    getDataObjLine[unid] = result;
 
-    data[unid] = {
-        data: {
-            labels: seriesLabels,
-            data: seriesData
-        },
-    };
+    if(getDataObjLine[unid] != null) {
+    if (typeof getDataObjLine[unid][unid] != 'undefined') {
+
+            var seriesData = getDataObjLine[unid][unid].series;
+            var seriesLabels = getDataObjLine[unid][unid].labels;
+
+            var data = {
+                [unid]: {
+                    labels: seriesLabels,
+                    data: seriesData
+                },
+            };
+        }
+    }
 
     return data;
 };
@@ -148,11 +190,7 @@ update_data_series = function ($http, unid, endPointFile) {
 
  This function only returns data for single item Charts. Thus we have one series item and one labels
  */
-var returnData = {'labels': 0, 'series': 0};
-function getData(call, $http) {
-
-    var labels = [];
-    var series = [];
+function getData(call, $http, unid) {
 
     $httpData = $http(
         {
@@ -161,23 +199,35 @@ function getData(call, $http) {
         })
         .success(function (datas) {
 
-            sc = {
-                scopedata: datas['series'],
-                scopelabels: datas['labels']
-            };
+            seriesData = datas['series'];
+            labelsData = datas['labels'];
+
+            setSeries(datas['series'], unid);
+            setLabels(datas['labels'], unid);
         })
         .error(function (datas, status) {
             console.log('Data error' + status + ' Data- '.datas)
         });
 
-    $httpData.then(function (datae) {
 
-        labels = datae['data']['labels'];
-        series = datae['data']['series'];
 
-        returnData = {'labels': labels, 'series': series};
-    });
-    return returnData;
+    var rr = getSeries(unid);
+
+
+    if(rr != null) {
+
+        test =  { [unid] : {'labels': getLabels(unid), 'series': getSeries(unid)}};
+        setSeries(null);
+        setLabels(null);
+
+    } else {
+
+        test =  null; //{ [unid] : {'labels': 0, 'series': 0}};
+        setSeries(null);
+        setLabels(null);
+    }
+
+    return test;
 };
 
 function getDataPie(call, $http) {

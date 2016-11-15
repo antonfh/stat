@@ -32,7 +32,9 @@ var myChartDyna,
  Notice the line "options" and there is assigned optionsDyna - thus the object below is then assigned to options later
  */
 optionsDyna = {
+    chartColors: ['#FF5252', '#FF8A80'],
     responsive: true,
+    animation: false,
     legend: {
         display: false
     },
@@ -103,21 +105,23 @@ optionsDyna = {
                      */
                     var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
-                        dataset = update_data($http, ctrlName, endPoint);
+                        datasetChartDynaLine = update_data($http, ctrlName, endPoint);
 
-                        setLabels[ctrlName].shift();
-                        setSeries[ctrlName].shift();
-                        setLabels[ctrlName].push(dataset[ctrlName]['data']['labels']);
-                        setSeries[ctrlName].push(dataset[ctrlName]['data']['data']);
+                        if (typeof datasetChartDynaLine != 'undefined') {
 
-                        /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
-                        chartSet.data.labels = setLabels[ctrlName];
+                            setLabels[ctrlName].shift();
+                            setSeries[ctrlName].shift();
+                            setLabels[ctrlName].push(datasetChartDynaLine[ctrlName]['labels'][0]);
+                            setSeries[ctrlName].push(datasetChartDynaLine[ctrlName]['data'][0]);
 
-                        /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
-                        chartSet.data.datasets[0].data = setSeries[ctrlName];
-                        chartSet.update();
+                            /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
+                            chartSet.data.labels = setLabels[ctrlName];
 
-                    }, 14000); //This is the interval time this function will be run (milliseconds)
+                            /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
+                            chartSet.data.datasets[0].data = setSeries[ctrlName];
+                            chartSet.update();
+                        }
+                    }, 25000); //This is the interval time this function will be run (milliseconds)
 
                     update_data($http, ctrlName, endPoint);
                 }
@@ -126,8 +130,8 @@ optionsDyna = {
 })();
 
 /*
-    Second graph controller example with less comments - basically a copy of the above only change the
-    getElementById to baseXDyna22 (which is the id for the div block in the index.html)
+ Second graph controller example with less comments - basically a copy of the above only change the
+ getElementById to baseXDyna22 (which is the id for the div block in the index.html)
  */
 (function () {
     appChart
@@ -143,8 +147,8 @@ optionsDyna = {
                     setLabels[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                     setSeries[ctrlName] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-                    var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
-                    chartSet = new Chart(document.getElementById("baseXDyna22"), {
+                    chartSet2 = myChartDyna2; //When you copy this controller - just give the charSet a new name
+                    chartSet2 = new Chart(document.getElementById("baseXDyna22"), {
                         type: 'line', //What chart to create
                         options: optionsDyna, //Add in any Global options for the chart
                         data: { //Your data object, consisting of labels to put on the chart and the datasets
@@ -159,21 +163,24 @@ optionsDyna = {
                     var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
 
-                        dataset = update_data($http, ctrlName, endPoint);
+                        datasetChartDynaLine2 = update_data($http, ctrlName, endPoint);
 
-                        setLabels[ctrlName].shift();
-                        setSeries[ctrlName].shift();
-                        setLabels[ctrlName].push(dataset[ctrlName]['data']['labels']);
-                        setSeries[ctrlName].push(dataset[ctrlName]['data']['data']);
+                        if (typeof datasetChartDynaLine2 != 'undefined') {
 
-                        /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
-                        chartSet.data.labels = setLabels[ctrlName];
+                            setLabels[ctrlName].shift();
+                            setSeries[ctrlName].shift();
+                            setLabels[ctrlName].push(datasetChartDynaLine2[ctrlName]['labels'][0]);
+                            setSeries[ctrlName].push(datasetChartDynaLine2[ctrlName]['data'][0]);
 
-                        /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
-                        chartSet.data.datasets[0].data = setSeries[ctrlName];
-                        chartSet.update();
+                            /* Here we assign the update setLabels then to the labels fields of the myChartDyna chart object */
+                            chartSet2.data.labels = setLabels[ctrlName];
 
-                    }, 25001); //This is the interval time this function will be run (milliseconds)
+                            /* Here we assign the update setSeries data to the data field of the myChartDyna chart object */
+                            chartSet2.data.datasets[0].data = setSeries[ctrlName];
+                            chartSet2.update();
+                        }
+
+                    }, 25000); //This is the interval time this function will be run (milliseconds)
 
                     update_data($http, ctrlName, endPoint);
                 }

@@ -103,23 +103,25 @@ optionsDynaBars = {
                      datasetBars[ctrlName]['data']['labels'] and
                      datasetBars[ctrlName]['data']['data']
                      */
-
                     var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
                     $interval(function () {
 
                         datasetBars = update_data($http, ctrlName, endPoint);
 
-                        setLabels.shift();
-                        setSeries.shift();
-                        setLabels.push(datasetBars[ctrlName]['data']['labels']);
-                        setSeries.push(datasetBars[ctrlName]['data']['data']);
+                        if (typeof datasetBars != 'undefined') {
 
-                        /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
-                        chartSet.data.labels = setLabels;
+                            setLabels.shift();
+                            setSeries.shift();
+                            setLabels.push(datasetBars[ctrlName]['labels'][0]);
+                            setSeries.push(datasetBars[ctrlName]['data'][0]);
 
-                        /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
-                        chartSet.data.datasets[0].data = setSeries;
-                        chartSet.update();
+                            /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
+                            chartSet.data.labels = setLabels;
+
+                            /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
+                            chartSet.data.datasets[0].data = setSeries;
+                            chartSet.update();
+                        }
                     }, 24000); //This is the interval time this function will be run (milliseconds)
 
                     update_data($http, ctrlName, endPoint); //Calls the update_data_series method to update data

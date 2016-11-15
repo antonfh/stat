@@ -13,26 +13,21 @@
     <link href="node_modules/gridstack/dist/gridstack.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-
 </head>
 
 <!-- ng-app tells Angular what your Angular app name is - refer to /mods/js/grCtrl to see how the app is setup -->
 <body ng-app="appChart">
 
-
 <br />
 <div class="container">
     <div class="row">
 
-
         <!-- This is using Gridster - this is the container for all the grid items - look at :
                 https://troolee.github.io/gridstack.js/
-            -->
+        -->
         <div class="grid-stack" >
 
-
             <!-- ROW 1 -->
-
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
             <div id="widget" class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="3">
 
@@ -63,10 +58,6 @@
                 </div>
             </div>
 
-
-
-
-
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
             <div id="xf94f444t" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
 
@@ -82,9 +73,7 @@
                 </div>
             </div>
 
-
            <!-- ROW 2 -->
-
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
             <div id="f" class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
@@ -124,7 +113,6 @@
                 </div>
             </div>
 
-
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content" ng-controller="polarCtrl">
                     <div class="graph_container">
@@ -136,9 +124,7 @@
                 </div>
             </div>
 
-
             <!-- ROW 4 -->
-
             <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
                 <div  class="grid-stack-item-content"  ng-controller="doughnutCtrl">
                     <div class="graph_container">
@@ -160,15 +146,9 @@
                 </div>
             </div>
 
-
         </div>
-
     </div>
 </div>
-
-
-
-
 
 <br />
 <br />
@@ -176,8 +156,8 @@
 <br />
 </body>
 
+<!-- 3rd Party Vendor and Script files -->
 <script src="node_modules/angular/angular.min.js"></script>
-
 <script src="node_modules/chart.js/dist/Chart.min.js"></script>
 <script src="node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
@@ -187,7 +167,7 @@
 
 
 <!-- Example AngularChart Controllers -->
-<script src="mods/js/grCtrl.js"></script>
+<script src="mods/js/grCtrl.js"></script> <!-- The main Controller - you need this first for others to work -->
 <script src="mods/js/chartLines.js"></script>
 <script src="mods/js/chartBars.js"></script>
 <script src="mods/js/chartPies.js"></script>
@@ -198,8 +178,11 @@
 <script src="mods/js/chartBarLines.js"></script>
 
 
+<!-- SCRIPT TO MAKE THE BLOCK OF CHARTS DRAGGABLE ON TOUCH SCREENS -->
 <script>$('#widget').draggable();</script>
 
+
+<!-- SCRIPT USED BY GRIDSTER TO MAKE MOVABLE GRIDS -->
 <script type="text/javascript">
     $(function () {
         var options = {
