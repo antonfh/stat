@@ -32,7 +32,7 @@ var myChartDyna,
  Notice the line "options" and there is assigned optionsDyna - thus the object below is then assigned to options later
  */
 optionsDyna = {
-    backgroundColor: ['#FF5252', '#FF8A80'],
+    backgroundColor: ['rgba(22, 38, 230, 0.45)', 'rgba(230, 195, 107, 0.45)'],
     responsive: true,
     animation: false,
     showLines: true,
@@ -86,6 +86,8 @@ optionsDyna = {
                             labels: setLabels[ctrlName],
                             datasets: [{
                                 fill: true,
+                                backgroundColor: 'rgba(22, 38, 230, 0.45)',
+                                borderColor: 'rgba(22, 38, 230, 0.45)',
                                 data: setSeries[ctrlName] //Your datasets - data is the totals to plot on chart
                             }]
                         }
@@ -155,7 +157,9 @@ optionsDyna = {
                         data: { //Your data object, consisting of labels to put on the chart and the datasets
                             labels: setLabels[ctrlName],
                             datasets: [{
-                                fill: true,
+                                fill: false,
+                                backgroundColor: 'rgba(22, 38, 230, 0.45)',
+                                borderColor: 'rgba(22, 38, 230, 0.45)',
                                 data: setSeries[ctrlName] //Your datasets - data is the totals to plot on chart
                             }]
                         }

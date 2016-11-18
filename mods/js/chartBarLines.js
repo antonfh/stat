@@ -12,10 +12,7 @@
  Set some global variables for the chart controller
  */
 var myChartDyna2,
-    optionsDyna2,
-    Datasetclb2a,
-    Datasetclb2b,
-    Labelsclb2;
+    optionsDyna2;
 
 
 /*
@@ -110,7 +107,6 @@ appChart
                         ]
                     }
                 });
-
 
                 /*
                  To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval

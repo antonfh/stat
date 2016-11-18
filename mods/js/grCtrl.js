@@ -27,7 +27,7 @@ var callURI = 'http://psapi.anton.co.za/'; //Change this to your server which wi
 appChart.config(['ChartJsProvider', function (ChartJsProvider) {
 
     // Configure all charts - global configuration option for Chatjs angular module
-    ChartJsProvider.setOptions({
+    /*ChartJsProvider.setOptions({
         chartColors: ['#FF5252', '#FF8A80'],
         responsive: true,
         animation: false
@@ -35,7 +35,7 @@ appChart.config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all line charts
     ChartJsProvider.setOptions('line', {
         showLines: true
-    });
+    });*/
 }]);
 
 /*

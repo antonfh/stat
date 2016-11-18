@@ -13,7 +13,7 @@
 appChart
     .controller("doughnutCtrl", ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
-            $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+            $scope.labels = ["Calls in", "Calls out", "Physical"];
             $scope.data = [300, 500, 100];
         }])
 ;

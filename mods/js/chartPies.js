@@ -78,14 +78,14 @@ appChart
             $interval(function () {
 
                 datasetPies = update_data($http, ctrlName, endPoint);
-console.log(datasetPies);
+
                 if (typeof datasetPies != 'undefined') {
                     setLabels = datasetPies[ctrlName]['data']['labels'];
                     setSeries = datasetPies[ctrlName]['data']['data'];
 
                     /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
                     chartSet.data.labels = JSON.stringify(setLabels);
-console.log(chartSet.data.labels);
+
                     /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
                     chartSet.data.datasets.data = JSON.stringify(setSeries);
                    // chartSet.update();
