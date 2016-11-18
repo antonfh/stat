@@ -7,7 +7,17 @@
  *
  * @requires $scope
  * */
+optionsDynaRadar = {
+    responsive: true,
+    maintainAspectRatio: false,
+    elements: {
+        points: {
+            borderWidth: 1,
+            borderColor: 'rgb(0, 0, 0)'
+        }
+    },
 
+};
 
 // appChart controller defined
 appChart

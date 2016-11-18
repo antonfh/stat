@@ -18,14 +18,14 @@
 <!-- ng-app tells Angular what your Angular app name is - refer to /mods/js/grCtrl to see how the app is setup -->
 <body ng-app="appChart">
 
-<br />
+<br/>
 <div class="container">
     <div class="row">
 
         <!-- This is using Gridster - this is the container for all the grid items - look at :
                 https://troolee.github.io/gridstack.js/
         -->
-        <div class="grid-stack" >
+        <div class="grid-stack">
 
             <!-- ROW 1 -->
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
@@ -35,7 +35,7 @@
                         ChartDyna, look at /mods/js/chartLines.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaLine">
-                    <div class="graph_container" >
+                    <div class="graph_container">
                         <h5>Dynamic updating Line chart (updates every minute)</h5>
 
                         <!-- canvas defines the chartjs angular directive - look at:
@@ -59,13 +59,14 @@
             </div>
 
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
-            <div id="xf94f444t" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5" data-gs-height="3">
+            <div id="xf94f444t" class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="5"
+                 data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
                         ChartDyna, look at /mods/js/chartLines.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaLine2">
-                    <div class="graph_container" >
+                    <div class="graph_container">
                         <h5>Dynamic updating Line chart 2</h5>
 
                         <canvas id="baseXDyna22"></canvas>
@@ -73,7 +74,7 @@
                 </div>
             </div>
 
-           <!-- ROW 2 -->
+            <!-- ROW 2 -->
             <!-- This is another grid block item. Notice data-gs-x and y is different -->
             <div id="f" class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
@@ -81,7 +82,7 @@
                         ChartDyna, look at /mods/js/chartLines.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaBarLines">
-                    <div class="graph_container" >
+                    <div class="graph_container">
                         <h5>Dynamic updating Line and Bar chart.</h5>
                         <canvas id="baseXDyna2"></canvas>
                     </div>
@@ -95,7 +96,7 @@
                         ChartDynaBars, look at /mods/js/chartLines.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaBars">
-                    <div class="graph_container" >
+                    <div class="graph_container">
                         <h5>Dynamic updating Bar chart</h5>
                         <canvas id="ChartDynaBars"></canvas>
                     </div>
@@ -103,18 +104,20 @@
             </div>
 
 
-           <!-- ROW 3 -->
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content" ng-controller="pieCtrl">
-                    <div class="graph_container"  >
+            <!-- ROW 3 -->
+            <div class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="4">
+                <div class="grid-stack-item-content" ng-controller="pieCtrl">
+                    <div class="graph_container">
                         <h5>Pie chart</h5>
-                        <canvas id="baseXPie"></canvas>
+                        <div>
+                            <canvas id="baseXPie"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content" ng-controller="polarCtrl">
+            <div class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="4">
+                <div class="grid-stack-item-content" ng-controller="polarCtrl">
                     <div class="graph_container">
                         <h5>Polar chart</h5>
                         <canvas id="polar-area" class="chart chart-polar-area"
@@ -125,18 +128,18 @@
             </div>
 
             <!-- ROW 4 -->
-            <div  class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content"  ng-controller="doughnutCtrl">
+            <div class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="4">
+                <div class="grid-stack-item-content" ng-controller="doughnutCtrl">
                     <div class="graph_container">
-                      <h5>Doughnut chart</h5>
+                        <h5>Doughnut chart</h5>
                         <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
                         </canvas>
                     </div>
                 </div>
             </div>
 
-            <div  class="grid-stack-item" data-gs-x="5" data-gs-y="15" data-gs-width="5" data-gs-height="3">
-                <div  class="grid-stack-item-content" ng-controller="radarCtrl">
+            <div class="grid-stack-item" data-gs-x="5" data-gs-y="15" data-gs-width="5" data-gs-height="4">
+                <div class="grid-stack-item-content" ng-controller="radarCtrl">
                     <div class="graph_container">
                         <h5>Radar chart</h5>
                         <canvas id="radar" class="chart chart-radar"
@@ -150,10 +153,12 @@
     </div>
 </div>
 
-<br />
-<br />
-<br />
-<br />
+<br/>
+<br/>
+<br/>
+<br/>
+
+
 </body>
 
 <!-- 3rd Party Vendor and Script files -->
@@ -163,7 +168,6 @@
 <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
 <script src="node_modules/jquery/dist/jquery.ui.touch-punch.min.js"></script>
 <script src="node_modules/gridstack/dist/gridstack.min.js"></script>
-
 
 
 <!-- Example AngularChart Controllers -->

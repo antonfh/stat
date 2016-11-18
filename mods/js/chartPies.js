@@ -11,6 +11,7 @@ var myChartDynaPie;
 
 optionsDynaPie = {
     responsive: true,
+    maintainAspectRatio: false,
     elements: {
         points: {
             borderWidth: 1,
@@ -26,18 +27,12 @@ appChart
         ['$scope', '$interval', '$http',
         function ($scope, $interval, $http) {
 
-            $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-            $scope.data = [300, 500, 100];
-
             var ctrlName = 'pieCtrl';
             /* This simply sets a base set of labels and series data to start of the graph - the $interval function
              below is what runs at set intervals and gets new chart data and updates the chart
              */
-            var setLabels = 'setLabels' + ctrlName;
-            var setSeries = 'setSeries' + ctrlName;
-
-            setLabels = ['Val X', 'Val Y', 'Val Z'];
-            setSeries = [0, 0, 0];
+            var setLabels = ['Val X', 'Val Y', 'Val Z'];
+            var setSeries = [40, 40, 20];
 
             /*
              This creates a new Chart object, we assign it to a name (here myChartDynaBars) - I would suggest each
@@ -48,18 +43,22 @@ appChart
              Notice below we have the options and then data items, data is a set of fields again,
              where we define the labels (assigned setLabels) to it and then datasets->data (assigned setSeries to it)
              */
-            chartSet = myChartDynaPie; //When you copy this controller - just give the charSet a new name
-            chartSet = new Chart(document.getElementById("baseXPie"), {
-                type: 'pie', //What chart to create
+            var ctx = document.getElementById("baseXPie").getContext('2d');
+            var chartSetDynaPie = new Chart(ctx, {
+                type: 'pie',
                 options: optionsDynaPie, //Add in any Global options for the chart
-                data: { //Your data object, consisting of labels to put on the chart and the datasets
+                data: {
                     labels: setLabels,
                     datasets: [{
-                        data: setSeries //Your datasets - data is the totals to plot on chart
+                        backgroundColor: [
+                            "#2ecc71",
+                            "#3498db",
+                            "#34495e"
+                        ],
+                        data: setSeries
                     }]
                 }
             });
-
 
             /*
              To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
@@ -80,17 +79,17 @@ appChart
                 datasetPies = update_data($http, ctrlName, endPoint);
 
                 if (typeof datasetPies != 'undefined') {
-                    setLabels = datasetPies[ctrlName]['data']['labels'];
-                    setSeries = datasetPies[ctrlName]['data']['data'];
+                    setLabels = datasetPies[ctrlName]['labels'];
+                    setSeries = datasetPies[ctrlName]['data'];
 
                     /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
-                    chartSet.data.labels = JSON.stringify(setLabels);
+                    chartSetDynaPie.data.labels = setLabels;
 
                     /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
-                    chartSet.data.datasets.data = JSON.stringify(setSeries);
-                   // chartSet.update();
+                    chartSetDynaPie.data.datasets[0].data = setSeries;
+                    chartSetDynaPie.update();
                 }
-                //chartSet.update();
+                chartSetDynaPie.update();
             }, 24000); //This is the interval time this function will be run (milliseconds)
 
             update_data($http, ctrlName, endPoint); //Calls the update_data_series method to update data
