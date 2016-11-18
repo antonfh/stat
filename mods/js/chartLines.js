@@ -32,9 +32,10 @@ var myChartDyna,
  Notice the line "options" and there is assigned optionsDyna - thus the object below is then assigned to options later
  */
 optionsDyna = {
-    chartColors: ['#FF5252', '#FF8A80'],
+    backgroundColor: ['#FF5252', '#FF8A80'],
     responsive: true,
     animation: false,
+    showLines: true,
     legend: {
         display: false
     },
