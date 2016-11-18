@@ -97,12 +97,13 @@ appChart
                                 type: 'bar',
                                 label: 'X',
                                 data: setSeries2a,
-                                backgroundColor: 'rgba(230, 93, 46, 0.45)'
+                                backgroundColor: 'rgba(22, 38, 230, 0.25)'
                             },
                             {
                                 type: 'line',
                                 label: 'Y',
-                                data: setSeries2b
+                                data: setSeries2b,
+                                borderColor: 'rgba(87, 87, 87, 0.86)',
                             }
                         ]
                     }

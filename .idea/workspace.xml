@@ -4,10 +4,6 @@
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartBarLines.js" afterPath="$PROJECT_DIR$/mods/js/chartBarLines.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDougnut.js" afterPath="$PROJECT_DIR$/mods/js/chartDougnut.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartLines.js" afterPath="$PROJECT_DIR$/mods/js/chartLines.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartPies.js" afterPath="$PROJECT_DIR$/mods/js/chartPies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/grCtrl.js" afterPath="$PROJECT_DIR$/mods/js/grCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <ignored path="crm.iws" />
@@ -32,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="17">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -99,23 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartLines.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chartLines.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartLines.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chartBarLines.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mods/js/chartBarLines.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="89" column="71" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="71" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -127,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
-              <caret line="44" column="47" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="47" />
+              <caret line="44" column="44" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -168,6 +152,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
               <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chartBarLines.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mods/js/chartBarLines.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="105" column="68" selection-start-line="105" selection-start-column="68" selection-end-line="105" selection-end-column="68" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -236,11 +232,11 @@
         <option value="$PROJECT_DIR$/mods/getData.js" />
         <option value="$PROJECT_DIR$/mainContentRandPieData.php" />
         <option value="$PROJECT_DIR$/mods/js/chartPies.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartBarLines.js" />
         <option value="$PROJECT_DIR$/mods/js/chartDougnut.js" />
         <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/mods/js/chartBarLines.js" />
       </list>
     </option>
   </component>
@@ -419,7 +415,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -644,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="17">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -700,10 +696,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartBarLines.js">
+    <entry file="file://$PROJECT_DIR$/mods/js/chartLines.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="89" column="71" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="71" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -713,15 +709,15 @@
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
-          <caret line="44" column="47" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="47" />
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartLines.js">
+    <entry file="file://$PROJECT_DIR$/mods/js/chartBarLines.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="89" column="71" selection-start-line="89" selection-start-column="71" selection-end-line="89" selection-end-column="71" />
+        <state relative-caret-position="357">
+          <caret line="105" column="68" selection-start-line="105" selection-start-column="68" selection-end-line="105" selection-end-column="68" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
