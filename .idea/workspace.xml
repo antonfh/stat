@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mainContentRandPolarData.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mainContentRandDNData.php" afterPath="$PROJECT_DIR$/mainContentRandRadarData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartRadar.js" afterPath="$PROJECT_DIR$/mods/js/chartRadar.js" />
     </list>
@@ -57,8 +59,8 @@
       <file leaf-file-name="chartRadar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mods/js/chartRadar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+            <state relative-caret-position="475">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -87,28 +89,18 @@
       <file leaf-file-name="mainContentRandPieData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainContentRandPieData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainContentRandDNData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainContentRandDNData.php">
+      <file leaf-file-name="mainContentRandRadarData.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainContentRandRadarData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainContentRandPolarData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainContentRandPolarData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -265,7 +257,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mods/js/chartBars.js" />
         <option value="$PROJECT_DIR$/mods/getData.js" />
-        <option value="$PROJECT_DIR$/mainContentRandPieData.php" />
         <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
         <option value="$PROJECT_DIR$/mods/js/chartBarLines.js" />
         <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
@@ -276,6 +267,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/mods/js/chartDougnut.js" />
         <option value="$PROJECT_DIR$/mods/js/chartPolarArea.js" />
+        <option value="$PROJECT_DIR$/mainContentRandPieData.php" />
+        <option value="$PROJECT_DIR$/mainContentRandRadarData.php" />
         <option value="$PROJECT_DIR$/mods/js/chartRadar.js" />
       </list>
     </option>
@@ -504,7 +497,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/LICENSE" />
     <entry file="file://$PROJECT_DIR$/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/README.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -741,14 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainContentRandPieData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainContentRandDNData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -781,10 +765,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRandPieData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainContentRandRadarData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartRadar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+        <state relative-caret-position="475">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
           <folding />
         </state>
       </provider>

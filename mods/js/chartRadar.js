@@ -52,19 +52,13 @@ appChart
                         labels: setLabels,
                         datasets: [
                             {
-                                backgroundColor: [
-                                    "rgba(22, 38, 230, 0.45)",
-                                    "rgba(33, 38, 230, 0.45)",
-                                    "rgba(55, 38, 230, 0.45)"
-                                ],
+                                label: "Set 1",
+                                backgroundColor: "rgba(22, 38, 230, 0.45)",
                                 data: setSeries
                             },
                             {
-                                backgroundColor: [
-                                    "rgba(22, 138, 130, 0.45)",
-                                    "rgba(133, 38, 130, 0.45)",
-                                    "rgba(155, 38, 30, 0.45)"
-                                ],
+                                label: "Set 2",
+                                backgroundColor: "rgba(22, 138, 130, 0.45)",
                                 data: setSeries2
                             }
                         ]
@@ -84,20 +78,22 @@ appChart
                  datasetBars[ctrlName]['data']['labels'] and
                  datasetBars[ctrlName]['data']['data']
                  */
-                var endPoint = 'mainContentRandPieData.php'; // Name of endpoint Script name on other side
+                var endPoint = 'mainContentRandRadarData.php'; // Name of endpoint Script name on other side
                 $interval(function () {
 
                     datasetRadar = update_data($http, ctrlName, endPoint);
 
                     if (typeof datasetRadar != 'undefined') {
                         setLabels = datasetRadar[ctrlName]['labels'];
-                        setSeries = datasetRadar[ctrlName]['data'];
+                        setSeries = datasetRadar[ctrlName]['data'][0];
+                        setSeries2 = datasetRadar[ctrlName]['data'][1];
 
                         /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
                         chartSetDynaRadar.data.labels = setLabels;
 
                         /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
                         chartSetDynaRadar.data.datasets[0].data = setSeries;
+                        chartSetDynaRadar.data.datasets[1].data = setSeries2;
                         chartSetDynaRadar.update();
                     }
                     chartSetDynaRadar.update();
