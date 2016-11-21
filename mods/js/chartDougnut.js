@@ -44,7 +44,7 @@ appChart
              */
             var ctx = document.getElementById("baseXDN").getContext('2d');
             var chartSetDynaDN = new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 options: optionsDynaDN, //Add in any Global options for the chart
                 data: {
                     labels: setLabels,
