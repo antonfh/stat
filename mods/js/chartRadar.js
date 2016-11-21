@@ -53,12 +53,12 @@ appChart
                         datasets: [
                             {
                                 label: "Set 1",
-                                backgroundColor: "rgba(22, 38, 230, 0.45)",
+                                backgroundColor: "rgba(179,181,198,0.2)",
                                 data: setSeries
                             },
                             {
                                 label: "Set 2",
-                                backgroundColor: "rgba(22, 138, 130, 0.45)",
+                                backgroundColor: "rgba(255,99,132,0.2)",
                                 data: setSeries2
                             }
                         ]
