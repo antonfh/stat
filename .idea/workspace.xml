@@ -2,27 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainContentRandPolarData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/chartjs-plugin-annotation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/chartjs-plugin-annotation.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/config.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/samples/box.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/samples/horizontal-line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/samples/labels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/src/box.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/src/chart.annotation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/chartjs-plugin-annotation/src/line.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartBars.js" afterPath="$PROJECT_DIR$/mods/js/chartBars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDougnut.js" afterPath="$PROJECT_DIR$/mods/js/chartDougnut.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartPies.js" afterPath="$PROJECT_DIR$/mods/js/chartPies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartRadar.js" afterPath="$PROJECT_DIR$/mods/js/chartRadar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/grCtrl.js" afterPath="$PROJECT_DIR$/mods/js/grCtrl.js" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +50,8 @@
       <file leaf-file-name="chartPies.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartPies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="815">
+              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -113,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartDougnut.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chartDougnut.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDougnut.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="815">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -175,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartBars.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chartBars.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartBars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            <state relative-caret-position="441">
+              <caret line="51" column="6" selection-start-line="49" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -188,8 +172,8 @@
       <file leaf-file-name="grCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="815">
+              <caret line="80" column="2" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -263,20 +247,20 @@
         <option value="$PROJECT_DIR$/mainContentRand.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mods/getData.js" />
-        <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
         <option value="$PROJECT_DIR$/mods/js/chartLines.js" />
         <option value="$PROJECT_DIR$/mainContentRandOneLine.php" />
         <option value="$PROJECT_DIR$/mainContentRandOneLineSet2.php" />
         <option value="$PROJECT_DIR$/mainContentRandPieData.php" />
         <option value="$PROJECT_DIR$/mainContentRandRadarData.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/mods/js/chartDougnut.js" />
         <option value="$PROJECT_DIR$/mods/js/chartPolarArea.js" />
         <option value="$PROJECT_DIR$/mods/js/chartBarLines.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/mods/js/chartRadar.js" />
-        <option value="$PROJECT_DIR$/mods/js/chartPies.js" />
         <option value="$PROJECT_DIR$/mods/js/chartBars.js" />
+        <option value="$PROJECT_DIR$/mods/js/grCtrl.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartPies.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartDougnut.js" />
       </list>
     </option>
   </component>
@@ -405,38 +389,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chartjs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -520,9 +472,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-315" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -718,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/angular-chart.js/dist/angular-chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
@@ -792,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartDougnut.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartPolarArea.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -844,18 +778,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartPies.js">
+    <entry file="file://$PROJECT_DIR$/mods/js/grCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="815">
+          <caret line="80" column="2" selection-start-line="80" selection-start-column="2" selection-end-line="80" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartBars.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="51" column="6" selection-start-line="49" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartPies.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="815">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartDougnut.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding />
         </state>
       </provider>

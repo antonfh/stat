@@ -47,5 +47,36 @@ appChart.config(['$httpProvider', function ($httpProvider) {
 }
 ]);
 
+// Font color for values inside the bar
+var insideFontColor = '255,255,255';
+// Font color for values above the bar
+var outsideFontColor = '0,0,0';
+// How close to the top edge bar can be before the value is put inside it
+var topThreshold = 20;
 
+var modifyCtx = function(ctx) {
+    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    return ctx;
+};
+
+var fadeIn = function(ctx, obj, x, y, black, step) {
+    var ctx = modifyCtx(ctx);
+    var alpha = 0;
+    ctx.fillStyle = black ? 'rgba(' + outsideFontColor + ',' + step + ')' : 'rgba(' + insideFontColor + ',' + step + ')';
+    ctx.fillText(obj, x, y);
+};
+
+var drawValue = function(context, step) {
+    var ctx = context.chart.ctx;
+
+    context.data.datasets.forEach(function (dataset) {
+        for (var i = 0; i < dataset.data.length; i++) {
+            var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+            var textY = (model.y > topThreshold) ? model.y - 3 : model.y + 20;
+            fadeIn(ctx, dataset.data[i], model.x, textY, model.y > topThreshold, step);
+        }
+    });
+};
 
