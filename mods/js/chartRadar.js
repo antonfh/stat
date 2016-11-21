@@ -23,7 +23,8 @@ optionsDynaRadar = {
         labels: {
             fontColor: 'rgb(255, 99, 132)'
         }
-    }
+    },
+
 };
 
 // Create app appCharts controller function
