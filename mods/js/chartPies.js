@@ -18,6 +18,12 @@ optionsDynaPie = {
             borderColor: 'rgb(0, 0, 0)'
         }
     },
+    legend: {
+        display: true,
+        labels: {
+            fontColor: 'rgb(255, 99, 132)'
+        }
+    }
 
 };
 
