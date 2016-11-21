@@ -37,7 +37,10 @@ var myChartDyna2,
 optionsDyna2 = {
     responsive: true,
     legend: {
-        display: false
+        display: true,
+        labels: {
+            fontColor: 'rgb(255, 99, 132)'
+        }
     },
     scales: {
         yAxes: [{
@@ -65,86 +68,86 @@ optionsDyna2 = {
  used in this example
  */
 (function () {
-appChart
-    .controller("ChartDynaBarLines",
-        ['$scope', '$interval', '$http',
-            function ($scope, $interval, $http) {
+    appChart
+        .controller("ChartDynaBarLines",
+            ['$scope', '$interval', '$http',
+                function ($scope, $interval, $http) {
 
-                /*
-                 We create a base set of variables to use in the charts
-                 */
-                setLabels2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-                setSeries2a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-                setSeries2b = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    /*
+                     We create a base set of variables to use in the charts
+                     */
+                    setLabels2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    setSeries2a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                    setSeries2b = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-                /*
-                 To do a mixed chart - say bar and line, you must defined the main type as bar, then in the
-                 data array you define the types you want.
+                    /*
+                     To do a mixed chart - say bar and line, you must defined the main type as bar, then in the
+                     data array you define the types you want.
 
-                 See document : http://www.chartjs.org/docs/#chart-configuration-mixed-chart-types
+                     See document : http://www.chartjs.org/docs/#chart-configuration-mixed-chart-types
 
-                 Notice in datasets inside of data field, we have a bar and a line chart, thus you will have
-                 2 chart items on the screen.
-                 */
-                var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
-                chartSet = new Chart(document.getElementById("baseXDyna2"), {
-                    type: 'bar',
-                    options: optionsDyna2,
-                    data: {
-                        labels: setLabels2,
-                        datasets: [
-                            {
-                                type: 'bar',
-                                label: 'X',
-                                data: setSeries2a,
-                                backgroundColor: 'rgba(22, 38, 230, 0.25)'
-                            },
-                            {
-                                type: 'line',
-                                label: 'Y',
-                                data: setSeries2b,
-                                borderColor: 'rgba(87, 87, 87, 0.86)',
-                            }
-                        ]
-                    }
-                });
+                     Notice in datasets inside of data field, we have a bar and a line chart, thus you will have
+                     2 chart items on the screen.
+                     */
+                    var chartSet = myChartDyna2; //When you copy this controller - just give the charSet a new name
+                    chartSet = new Chart(document.getElementById("baseXDyna2"), {
+                        type: 'bar',
+                        options: optionsDyna2,
+                        data: {
+                            labels: setLabels2,
+                            datasets: [
+                                {
+                                    type: 'bar',
+                                    label: 'X',
+                                    data: setSeries2a,
+                                    backgroundColor: 'rgba(22, 38, 230, 0.25)'
+                                },
+                                {
+                                    type: 'line',
+                                    label: 'Y',
+                                    data: setSeries2b,
+                                    borderColor: 'rgba(87, 87, 87, 0.86)',
+                                }
+                            ]
+                        }
+                    });
 
-                /*
-                 To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
-                 function, the function simply takes call function and then the interval time (here 25000)
+                    /*
+                     To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
+                     function, the function simply takes call function and then the interval time (here 25000)
 
-                 The function itself first gets the data (assigned dataset2) - then uses standard shift and push
-                 methods on the setLabels and setSeries global objects. In the push method we then add the data to the
-                 object.
+                     The function itself first gets the data (assigned dataset2) - then uses standard shift and push
+                     methods on the setLabels and setSeries global objects. In the push method we then add the data to the
+                     object.
 
-                 dataset2 is the data returned from calling update_data and the format is:
+                     dataset2 is the data returned from calling update_data and the format is:
 
-                 dataset2[ctrlName]['data']['labels'] and
-                 dataset2[ctrlName]['data']['data1'] and
-                 dataset2[ctrlName]['data']['data2']
-                 */
-                var ctrlName = 'ChartDynaBarLines';
-                var endPoint = 'mainContentRantestd.php'; // Name of endpoint Script name on other side
-                $interval(function () {
+                     dataset2[ctrlName]['data']['labels'] and
+                     dataset2[ctrlName]['data']['data1'] and
+                     dataset2[ctrlName]['data']['data2']
+                     */
+                    var ctrlName = 'ChartDynaBarLines';
+                    var endPoint = 'mainContentRantestd.php'; // Name of endpoint Script name on other side
+                    $interval(function () {
 
-                    dataset2 = update_data_series($http, ctrlName, endPoint);
+                        dataset2 = update_data_series($http, ctrlName, endPoint);
 
-                    setLabels2.shift();
-                    setSeries2a.shift();
-                    setSeries2b.shift();
+                        setLabels2.shift();
+                        setSeries2a.shift();
+                        setSeries2b.shift();
 
-                    setLabels2.push(dataset2[ctrlName]['data']['labels']);
-                    setSeries2a.push(dataset2[ctrlName]['data']['data1']);
-                    setSeries2b.push(dataset2[ctrlName]['data']['data2']);
+                        setLabels2.push(dataset2[ctrlName]['data']['labels']);
+                        setSeries2a.push(dataset2[ctrlName]['data']['data1']);
+                        setSeries2b.push(dataset2[ctrlName]['data']['data2']);
 
-                    chartSet.data.labels = setLabels2;
-                    chartSet.data.datasets[0].data = setSeries2a;
-                    chartSet.data.datasets[1].data = setSeries2b;
-                    chartSet.update();
-                }, 25000);
+                        chartSet.data.labels = setLabels2;
+                        chartSet.data.datasets[0].data = setSeries2a;
+                        chartSet.data.datasets[1].data = setSeries2b;
+                        chartSet.update();
+                    }, 25000);
 
-                update_data_series($http, ctrlName, endPoint); //Calls the update_data_series method to update data
-            }
-        ]
-    );
+                    update_data_series($http, ctrlName, endPoint); //Calls the update_data_series method to update data
+                }
+            ]
+        );
 })();
