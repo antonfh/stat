@@ -35,7 +35,7 @@ appChart
             var setSeries = [40, 40, 20];
 
             /*
-             This creates a new Chart object, we assign it to a name (here myChartDynaBars) - I would suggest each
+             This creates a new Chart object, we assign it to a name (here myChartDynaPie) - I would suggest each
              new chart object you create that you give it a distinct name - else you have some data conflicts
              as JS will build all the vars and object on the page - you need to have your vars and objects
              with unique names so the web page knows what is what
@@ -64,14 +64,14 @@ appChart
              To make sure our chart actually updates every set time (Seconds, minutes etc), we use the $interval
              function, the function simply takes call function and then the interval time (here 24000)
 
-             The function itself first gets the data (assigned datasetBars) - then uses standard shift and push
+             The function itself first gets the data (assigned datasetPies) - then uses standard shift and push
              methods on the setLabels and setSeries global objects. In the push method we then add the data to the
              object.
 
-             datasetBars is the data returned from calling update_data and the format is:
+             datasetPies is the data returned from calling update_data and the format is:
 
-             datasetBars[ctrlName]['data']['labels'] and
-             datasetBars[ctrlName]['data']['data']
+             datasetPies[ctrlName]['data']['labels'] and
+             datasetPies[ctrlName]['data']['data']
              */
             var endPoint = 'mainContentRandPieData.php'; // Name of endpoint Script name on other side
             $interval(function () {
@@ -82,10 +82,10 @@ appChart
                     setLabels = datasetPies[ctrlName]['labels'];
                     setSeries = datasetPies[ctrlName]['data'];
 
-                    /* Here we assign the update setLabels then to the labels fields of the myChartDynaBars chart object */
+                    /* Here we assign the update setLabels then to the labels fields of the myChartDynaPie chart object */
                     chartSetDynaPie.data.labels = setLabels;
 
-                    /* Here we assign the update setSeries data to the data field of the myChartDynaBars chart object */
+                    /* Here we assign the update setSeries data to the data field of the myChartDynaPie chart object */
                     chartSetDynaPie.data.datasets[0].data = setSeries;
                     chartSetDynaPie.update();
                 }

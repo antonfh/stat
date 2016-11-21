@@ -79,7 +79,7 @@
             <div id="f" class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
-                        ChartDyna, look at /mods/js/chartLines.js
+                        ChartDyna, look at /mods/js/chartBarLines.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaBarLines">
                     <div class="graph_container">
@@ -93,7 +93,7 @@
             <div id="fs" class="grid-stack-item" data-gs-x="5" data-gs-y="5" data-gs-width="5" data-gs-height="3">
 
                 <!-- The grid block item, notice again we define the Angular controller - ng-controller, this one calling
-                        ChartDynaBars, look at /mods/js/chartLines.js
+                        ChartDynaBars, look at /mods/js/chartBars.js
                         -->
                 <div class="grid-stack-item-content" ng-controller="ChartDynaBars">
                     <div class="graph_container">
@@ -105,6 +105,8 @@
 
 
             <!-- ROW 3 -->
+
+            <!-- EXAMPLE PIE CHART /mods/js/chartPies.js (pieCtrl) -->
             <div class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="4">
                 <div class="grid-stack-item-content" ng-controller="pieCtrl">
                     <div class="graph_container">
@@ -116,26 +118,33 @@
                 </div>
             </div>
 
+            <!-- EXAMPLE POLAR AREA CHART /mods/js/chartPolarArea.js (polarCtrl) -->
             <div class="grid-stack-item" data-gs-x="0" data-gs-y="10" data-gs-width="5" data-gs-height="4">
                 <div class="grid-stack-item-content" ng-controller="polarCtrl">
                     <div class="graph_container">
                         <h5>Polar chart</h5>
-                        <canvas id="baseXPolar"></canvas>
+                        <div>
+                            <canvas id="baseXPolar"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- ROW 4 -->
+
+            <!-- EXAMPLE Dougnut CHART /mods/js/chartDougnut.js (doughnutCtrl) -->
             <div class="grid-stack-item" data-gs-x="0" data-gs-y="15" data-gs-width="5" data-gs-height="4">
                 <div class="grid-stack-item-content" ng-controller="doughnutCtrl">
                     <div class="graph_container">
                         <h5>Doughnut chart</h5>
-                        <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
-                        </canvas>
+                        <div>
+                            <canvas id="baseXDN"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- EXAMPLE - RADAR AREA CHART /mods/js/chartRadar.js (radarCtrl) -->
             <div class="grid-stack-item" data-gs-x="5" data-gs-y="15" data-gs-width="5" data-gs-height="4">
                 <div class="grid-stack-item-content" ng-controller="radarCtrl">
                     <div class="graph_container">
