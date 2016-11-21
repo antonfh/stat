@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eac5e8f3-6b71-4cc9-abe5-1e209631ee9a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartDougnut.js" afterPath="$PROJECT_DIR$/mods/js/chartDougnut.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mods/js/chartPolarArea.js" afterPath="$PROJECT_DIR$/mods/js/chartPolarArea.js" />
     </list>
     <ignored path="crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartDougnut.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chartDougnut.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mods/js/chartDougnut.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="271">
@@ -124,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chartPolarArea.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chartPolarArea.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mods/js/chartPolarArea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+            <state relative-caret-position="102">
+              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -273,10 +272,10 @@
         <option value="$PROJECT_DIR$/mainContentRandOneLine.php" />
         <option value="$PROJECT_DIR$/mainContentRandOneLineSet2.php" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/mods/js/chartPolarArea.js" />
         <option value="$PROJECT_DIR$/mods/js/chartPies.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/mods/js/chartDougnut.js" />
+        <option value="$PROJECT_DIR$/mods/js/chartPolarArea.js" />
       </list>
     </option>
   </component>
@@ -741,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mods/js/chartPolarArea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mods/js/chartPies.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -785,6 +776,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mods/js/chartPolarArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
           <folding />
         </state>
       </provider>

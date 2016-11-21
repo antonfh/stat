@@ -50,9 +50,9 @@ appChart
                     labels: setLabels,
                     datasets: [{
                         backgroundColor: [
-                            "rgba(23, 21, 87, 0.51)",
-                            "rgba(20, 87, 32, 0.51)",
-                            "rgba(230, 93, 46, 0.51)"
+                            "rgba(23, 21, 87, 0.41)",
+                            "rgba(20, 87, 32, 0.41)",
+                            "rgba(230, 93, 46, 0.41)"
                         ],
                         data: setSeries
                     }]
