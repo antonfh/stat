@@ -2,8 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 date_default_timezone_set('Africa/Johannesburg');
 
-$rnd1 = rand(-100, 100);
-$rnd2 = rand(-100, 100);
+$rnd1 = rand(-50, 50);
 $dte = Date("H:i:s");
 
 $ddata =<<< EOT

@@ -165,7 +165,7 @@ optionsDyna = {
                         }
                     });
 
-                    var endPoint = 'mainContentRandOneLine.php'; // Name of endpoint Script name on other side
+                    var endPoint = 'mainContentRandOneLineSet2.php'; // Name of endpoint Script name on other side
                     $interval(function () {
 
                         datasetChartDynaLine2 = update_data($http, ctrlName, endPoint);
