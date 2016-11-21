@@ -44,7 +44,7 @@ appChart
              */
             var ctx = document.getElementById("baseXPolar").getContext('2d');
             var chartSetDynaPolar = new Chart(ctx, {
-                type: 'polar',
+                type: 'polarArea',
                 options: optionsDynaPolar, //Add in any Global options for the chart
                 data: {
                     labels: setLabels,
