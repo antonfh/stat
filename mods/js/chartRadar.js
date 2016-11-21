@@ -33,6 +33,7 @@ appChart
                  */
                 var setLabels = ['Val X', 'Val Y', 'Val Z'];
                 var setSeries = [40, 40, 20];
+                var setSeries2 = [10, 10, 80];
 
                 /*
                  This creates a new Chart object, we assign it to a name (here chartSetDynaRadar) - I would suggest each
@@ -49,14 +50,24 @@ appChart
                     options: optionsDynaRadar, //Add in any Global options for the chart
                     data: {
                         labels: setLabels,
-                        datasets: [{
-                            backgroundColor: [
-                                "rgba(22, 38, 230, 0.45)",
-                                "rgba(33, 38, 230, 0.45)",
-                                "rgba(55, 38, 230, 0.45)"
-                            ],
-                            data: setSeries
-                        }]
+                        datasets: [
+                            {
+                                backgroundColor: [
+                                    "rgba(22, 38, 230, 0.45)",
+                                    "rgba(33, 38, 230, 0.45)",
+                                    "rgba(55, 38, 230, 0.45)"
+                                ],
+                                data: setSeries
+                            },
+                            {
+                                backgroundColor: [
+                                    "rgba(22, 138, 130, 0.45)",
+                                    "rgba(133, 38, 130, 0.45)",
+                                    "rgba(155, 38, 30, 0.45)"
+                                ],
+                                data: setSeries2
+                            }
+                        ]
                     }
                 });
 
