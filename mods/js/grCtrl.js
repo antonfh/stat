@@ -61,7 +61,7 @@ var outsideFontColor = '175,175,175';
 var topThreshold = 20;
 
 var modifyCtx = function(ctx) {
-    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'small', Chart.defaults.global.defaultFontFamily);
+    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'x-small', Chart.defaults.global.defaultFontFamily);
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     return ctx;

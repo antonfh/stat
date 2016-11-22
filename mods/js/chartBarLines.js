@@ -51,6 +51,9 @@ optionsDyna2 = {
     },
     /* Notice the next block(s) adds a value label to the plot points on the chart -
         in this case it will show a value on both the bar and the line chart (as this is a line and bar chart)
+
+        TO REMOVE THE LABELS ON  THE CHART PLOT POINTS - SIMPLY REMOVE THE CONFIG SECTIONS BELOW: (tooltips, hover and
+        animation)
      */
     tooltips: {
         enabled: false
