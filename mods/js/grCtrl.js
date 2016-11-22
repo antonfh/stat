@@ -47,15 +47,21 @@ appChart.config(['$httpProvider', function ($httpProvider) {
 }
 ]);
 
-// Font color for values inside the bar
-var insideFontColor = '255,255,255';
+/*
+    The Following functions and variables are used as configuration and options used by the Bar and Line chart
+    options to set the value labels on the chart plots.
+ */
+
+
+// Font color for values inside the bar - White is 255,255,255, black is 0,0,0
+var insideFontColor = '0,0,0';
 // Font color for values above the bar
-var outsideFontColor = '0,0,0';
+var outsideFontColor = '175,175,175';
 // How close to the top edge bar can be before the value is put inside it
 var topThreshold = 20;
 
 var modifyCtx = function(ctx) {
-    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'small', Chart.defaults.global.defaultFontFamily);
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     return ctx;

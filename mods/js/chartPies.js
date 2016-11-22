@@ -24,6 +24,8 @@ optionsDynaPie = {
             fontColor: 'rgb(255, 99, 132)'
         }
     },
+    /* Notice the next block(s) adds a value label to each slice in the chart -
+     */
     hover: {
         animationDuration: 0
     },

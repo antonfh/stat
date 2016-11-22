@@ -48,6 +48,25 @@ optionsDyna2 = {
                 beginAtZero: true
             }
         }]
+    },
+    /* Notice the next block(s) adds a value label to the plot points on the chart -
+        in this case it will show a value on both the bar and the line chart (as this is a line and bar chart)
+     */
+    tooltips: {
+        enabled: false
+    },
+    hover: {
+        animationDuration: 0
+    },
+    animation: {
+        onComplete: function() {
+            this.chart.controller.draw();
+            drawValue(this, 1);
+        },
+        onProgress: function(state) {
+            var animation = state.animationObject;
+            drawValue(this, animation.currentStep / animation.numSteps);
+        }
     }
 };
 

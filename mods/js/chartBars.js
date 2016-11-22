@@ -44,6 +44,9 @@ optionsDynaBars = {
             }
         }]
     },
+    /* Notice the next block(s) adds a value label to the plot points on the chart -
+     in this case it will show a value on the bar and the line chart
+     */
     tooltips: {
         enabled: false
     },
